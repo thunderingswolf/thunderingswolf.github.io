@@ -2034,7 +2034,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://xyzy.pro/2019/07/11/Docker%E6%93%8D%E4%BD%9C%E6%89%8B%E5%86%8C/">
+    <link itemprop="mainEntityOfPage" href="http://xyzy.pro/2019/07/11/Postgres%E6%93%8D%E4%BD%9C%E6%89%8B%E5%86%8C/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="程序员老冯">
@@ -2053,8 +2053,8 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/07/11/Docker%E6%93%8D%E4%BD%9C%E6%89%8B%E5%86%8C/" itemprop="url">
-                  Docker操作手册
+                <a class="post-title-link" href="/2019/07/11/Postgres%E6%93%8D%E4%BD%9C%E6%89%8B%E5%86%8C/" itemprop="url">
+                  Postgres操作手册
                 </a>
               
             
@@ -2150,7 +2150,13 @@
       
         
           
-            <h2 id="Docker操作手册"><a href="#Docker操作手册" class="headerlink" title="Docker操作手册"></a>Docker操作手册</h2><h3 id="Docker安装"><a href="#Docker安装" class="headerlink" title="Docker安装"></a>Docker安装</h3><h4 id="拷贝文件："><a href="#拷贝文件：" class="headerlink" title="拷贝文件："></a>拷贝文件：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">docker cp [OPTIONS] CONTAINER:SRC_PATH DEST_PATH|-</span><br><span class="line">docker cp [OPTIONS] SRC_PATH|- CONTAINER:DEST_PATH</span><br><span class="line"></span><br><span class="line">#将主机&#x2F;www&#x2F;runoob目录拷贝到容器96f7f14e99ab的&#x2F;www目录下。</span><br><span class="line"></span><br><span class="line">docker cp &#x2F;www&#x2F;runoob 96f7f14e99ab:&#x2F;www&#x2F;</span><br><span class="line">#将主机&#x2F;www&#x2F;runoob目录拷贝到容器96f7f14e99ab中，目录重命名为www。</span><br><span class="line"></span><br><span class="line">docker cp &#x2F;www&#x2F;runoob 96f7f14e99ab:&#x2F;www</span><br><span class="line">#将容器96f7f14e99ab的&#x2F;www目录拷贝到主机的&#x2F;tmp目录中。</span><br><span class="line"></span><br><span class="line">docker cp  96f7f14e99ab:&#x2F;www &#x2F;tmp&#x2F;</span><br></pre></td></tr></table></figure>
+            <h2 id="Postgres操作手册"><a href="#Postgres操作手册" class="headerlink" title="Postgres操作手册"></a>Postgres操作手册</h2><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>官网：<a href="https://www.postgresql.org/" target="_blank" rel="noopener">https://www.postgresql.org/</a></p>
+<p>docker：<a href="https://hub.docker.com/_/postgres" target="_blank" rel="noopener">https://hub.docker.com/_/postgres</a></p>
+<figure class="highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run --name some-postgres -e POSTGRES_PASSWORD=mysecretpassword -d postgres</span><br></pre></td></tr></table></figure>
+
+
+
+
 
 
           
