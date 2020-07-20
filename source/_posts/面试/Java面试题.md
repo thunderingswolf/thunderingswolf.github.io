@@ -144,6 +144,13 @@ Java开发工具包(JDK)是完整的Java软件开发包，包含了JRE，编译�
 
 JRE 代表 Java 运行时（Java run-time），是运行 Java 引用所必须的。JDK 代表 Java 开发工具（Java development kit），是 Java 程序的开发工具，如 Java 编译器，它也包含 JRE。JVM 代表 Java 虚拟机（Java virtual machine），它的责任是运行 Java 应用。JIT 代表即时编译（Just In Time compilation），当代码执行的次数超过一定的阈值时，会将 Java 字节码转换为本地代码，如，主要的热点代码会被准换为本地代码，这样有利大幅度提高 Java 应用的性能。
 
+### JDK 和 JRE 有什么区别？
+
+- JDK：Java Development Kit 的简称，java 开发工具包，提供了 java 的开发环境和运行环境。
+- JRE：Java Runtime Environment 的简称，java 运行环境，为 java 的运行提供了所需环境。
+
+具体来说 JDK 其实包含了 JRE，同时还包含了编译 java 源码的编译器 javac，还包含了很多 java 程序调试和分析的工具。简单来说：如果你需要运行 java 程序，只需安装 JRE 就可以了，如果你需要编写 java 程序，需要安装 JDK。
+
 
 
 ### Java基本类型-多少字节？
@@ -173,6 +180,18 @@ JRE 代表 Java 运行时（Java run-time），是运行 Java 引用所必须的
 **装箱**：将基本类型用它们对应的引用类型包装起来；
 
 **拆箱**：将包装类型转换为基本数据类型；
+
+### String 属于基础的数据类型吗？
+
+String 不属于基础类型，基础类型有 8 种：byte、boolean、char、short、int、float、long、double，而 String 属于对象。
+
+### java 中操作字符串都有哪些类？它们之间有什么区别？
+
+操作字符串的类有：String、StringBuffer、StringBuilder。
+
+String 和 StringBuffer、StringBuilder 的区别在于 String 声明的是不可变的对象，每次操作都会生成新的 String 对象，然后将指针指向新的 String 对象，而 StringBuffer、StringBuilder 可以在原有对象的基础上进行操作，所以在经常改变字符串内容的情况下最好不要使用 String。
+
+StringBuffer 和 StringBuilder 最大的区别在于，StringBuffer 是线程安全的，而 StringBuilder 是非线程安全的，但 StringBuilder 的性能却高于 StringBuffer，所以在单线程环境下推荐使用 StringBuilder，多线程环境下推荐使用 StringBuffer。
 
 ### 字符型常量和字符串常量的区别
 
@@ -207,9 +226,119 @@ String是不可变类，因此对String进行操作都会产生新的String对�
 
 StringBufffer和StringBuild最大的区别，就是StringBuffer线程安全，但效率低，而StringBuild线程不安全，但效率高，且此两者只能通过构造函数的方式初始化。而String可以通过构造函数和字面量复制两种方式。
 
+### String类通过new创建和直接赋值字符串的区别？？
 
+**答：**
+
+方式一：String a = “aaa” ;方式二：String b = new String(“aaa”);
+
+- 两种方式都能创建字符串对象，但方式一要比方式二更优。
+- 因为字符串是保存在常量池中的，而通过new创建的对象会存放在堆内存中。
+
+**一：常量池中已经有字符串常量”aaa”**
+
+- 通过方式一创建对象，程序运行时会在常量池中查找”aaa”字符串，将找到的”aaa”字符串的地址赋给a。
+- 通过方式二创建对象，无论常量池中有没有”aaa”字符串，程序都会在堆内存中开辟一片新空间存放新对象。
+
+**二：常量池中没有字符串常量”aaa”**
+
+- 通过方式一创建对象，程序运行时会将”aaa”字符串放进常量池，再将其地址赋给a。
+- 通过方式二创建对象，程序会在堆内存中开辟一片新空间存放新对象，同时会将”aaa”字符串放入常量池，相当于创建了两个对象。
+
+### Java中Int与integer用==比较详解？？
+
+**答：**
+
+①、无论如何，Integer与new Integer不会相等。不会经历拆箱过程，因为它们存放内存的位置不一样。（要看具体位置，可以看看这篇文章：点击打开链接）
+
+②、两个都是非new出来的Integer，如果数在-128到127之间，则是true,否则为false。
+
+③、两个都是new出来的,则为false。
+
+④、int和integer(new或非new)比较，都为true，因为会把Integer自动拆箱为int，其实就是相当于两个int类型比较。
 
 > ==\equals
+
+### == 和 equals 的区别是什么？
+
+**== 解读**
+
+对于基本类型和引用类型 == 的作用效果是不同的，如下所示：
+
+- 基本类型：比较的是值是否相同；
+- 引用类型：比较的是引用是否相同；
+
+代码示例：
+
+```
+String x = "string";
+String y = "string";
+String z = new String("string");
+System.out.println(x==y); // true
+System.out.println(x==z); // false
+System.out.println(x.equals(y)); // true
+System.out.println(x.equals(z)); // true
+```
+
+代码解读：因为 x 和 y 指向的是同一个引用，所以 == 也是 true，而 new String()方法则重写开辟了内存空间，所以 == 结果为 false，而 equals 比较的一直是值，所以结果都为 true。
+
+**equals 解读**
+
+equals 本质上就是 ==，只不过 String 和 Integer 等重写了 equals 方法，把它变成了值比较。看下面的代码就明白了。
+
+首先来看默认情况下 equals 比较一个有相同值的对象，代码如下：
+
+```
+class Cat {
+    public Cat(String name) {
+        this.name = name;
+    }
+ 
+    private String name;
+ 
+    public String getName() {
+        return name;
+    }
+ 
+    public void setName(String name) {
+        this.name = name;
+    }
+}
+ 
+Cat c1 = new Cat("王磊");
+Cat c2 = new Cat("王磊");
+System.out.println(c1.equals(c2)); // false
+```
+
+输出结果出乎我们的意料，竟然是 false？这是怎么回事，看了 equals 源码就知道了，源码如下：
+
+```
+public boolean equals(Object obj) {
+    return (this == obj);
+}
+```
+
+原来 equals 本质上就是 ==。
+
+那问题来了，两个相同值的 String 对象，为什么返回的是 true？代码如下：
+
+```
+String s1 = new String("老王");
+String s2 = new String("老王");
+System.out.println(s1.equals(s2)); // true
+```
+
+同样的，当我们进入 String 的 equals 方法，找到了答案，代码如下：
+
+```
+
+```
+
+原来是 String 重写了 Object 的 equals 方法，把引用比较改成了值比较。
+
+总结 ：== 对于基本类型来说是值比较，对于引用类型来说是比较的是引用；而 equals 默认情况下是引用比较，只是很多类重新了 equals 方法，比如 String、Integer 等把它变成了值比较，所以一般情况下 equals 比较的是值是否相等。
+
+
 
 ### java中==和equals()的区别？？？
 
@@ -265,6 +394,44 @@ hashCode() 的作用是获取哈希码，也称为散列码；它实际上是返
 ### hashCode()和equals()方法的重要性体现在什么地方？
 
 Java中的HashMap使用hashCode()和equals()方法来确定键值对的索引，当根据键获取值的时候也会用到这两个方法。如果没有正确的实现这两个方法，两个不同的键可能会有相同的hash值，因此，可能会被集合认为是相等的。而且，这两个方法也用来发现重复元素。所以这两个方法的实现对HashMap的精确性和正确性是至关重要的。
+
+### HashCode（）与equals的关系？？
+
+答：
+1)、hashcode是object类的一个方法，返回值是该对象的哈希码值，同一个对象的哈希码值一定相等，但是不同的对象的哈希码值也是有可能相等的。
+
+2)、equals同样是object类的一个方法，比较两个对象是否是同一个对象，其内部实现是通过==来比较两个对象的内存地址是否相等的，如果需要比较两个对象的内容是否相等，则需要重写equals方法，重写的equals方法用于比较对象的内容是否相等。
+
+3)、因此如果两个对象根据equals()方法比较相等，那么这两个对象的hashcode()返回值一定相等，如果两个对象的hashcode()返回值相等，其equals()比较结果也不一定是true。
+
+### 两个对象的 hashCode()相同，则 equals()也一定为 true，对吗？
+
+不对，两个对象的 hashCode()相同，equals()不一定 true。
+
+代码示例：
+
+```
+String str1 = "通话";
+String str2 = "重地";
+System.out.println(String.format("str1：%d | str2：%d",  str1.hashCode(),str2.hashCode()));
+System.out.println(str1.equals(str2));
+```
+
+执行的结果：
+
+```
+
+```
+
+代码解读：很显然“通话”和“重地”的 hashCode() 相同，然而 equals() 则为 false，因为在散列表中，hashCode()相等即两个键值对的哈希值相等，然而哈希值相等，并不一定能得出键值对相等。
+
+### a.hashCode() 有什么用？与 a.equals(b) 有什么关系？
+
+hashCode() 方法是相应对象整型的 hash 值。它常用于基于 hash 的集合类，如 Hashtable、HashMap、LinkedHashMap等等。它与 equals() 方法关系特别紧密。根据 Java 规范，两个使用 equal() 方法来判断相等的对象，必须具有相同的 hash code。
+
+### **“a==b”和”a.equals(b)”有什么区别？**
+
+如果 a 和 b 都是对象，则 a==b 是比较两个对象的引用，只有当 a 和 b 指向的是堆中的同一个对象才会返回 true，而 a.equals(b) 是进行逻辑比较，所以通常需要重写该方法来提供逻辑一致性的比较。例如，String 类重写 equals() 方法，所以可以用于两个不同对象，但是包含的字母相同的比较。
 
 > 包，类，对象，方法，变量，关键字
 >
@@ -588,56 +755,7 @@ Java 中的 String 不可变是因为 Java 的设计者认为字符串使用非�
 
 JVM 底层 与 GC（Garbage Collection） 的面试问题
 
-### 64 位 JVM 中，int 的长度是多数？
 
-Java 中，int 类型变量的长度是一个固定值，与平台无关，都是 32 位。意思就是说，在 32 位 和 64 位 的Java 虚拟机中，int 类型的长度是相同的。
-
-### Serial 与 Parallel GC之间的不同之处？
-
-Serial 与 Parallel 在GC执行的时候都会引起 stop-the-world。它们之间主要不同 serial 收集器是默认的复制收集器，执行 GC 的时候只有一个线程，而 parallel 收集器使用多个 GC 线程来执行。
-
-### 32 位和 64 位的 JVM，int 类型变量的长度是多数？
-
-32 位和 64 位的 JVM 中，int 类型变量的长度是相同的，都是 32 位或者 4 个字节。
-
-### Java 中 WeakReference 与 SoftReference的区别？
-
-虽然 WeakReference 与 SoftReference 都有利于提高 GC 和 内存的效率，但是 WeakReference ，一旦失去最后一个强引用，就会被 GC 回收，而软引用虽然不能阻止被回收，但是可以延迟到 JVM 内存不足的时候。
-
-### WeakHashMap 是怎么工作的？
-
-WeakHashMap 的工作与正常的 HashMap 类似，但是使用弱引用作为 key，意思就是当 key 对象没有任何引用时，key/value 将会被回收。
-
-### JVM 选项 -XX:+UseCompressedOops 有什么作用？为什么要使用？
-
-当你将你的应用从 32 位的 JVM 迁移到 64 位的 JVM 时，由于对象的指针从 32 位增加到了 64 位，因此堆内存会突然增加，差不多要翻倍。这也会对 CPU 缓存（容量比内存小很多）的数据产生不利的影响。因为，迁移到 64 位的 JVM 主要动机在于可以指定最大堆大小，通过压缩 OOP 可以节省一定的内存。通过 -XX:+UseCompressedOops 选项，JVM 会使用 32 位的 OOP，而不是 64 位的 OOP。
-
-### 怎样通过 Java 程序来判断 JVM 是 32 位 还是 64 位？
-
-你可以检查某些系统属性如 sun.arch.data.model 或 os.arch 来获取该信息。
-
-### 32 位 JVM 和 64 位 JVM 的最大堆内存分别是多数？
-
-理论上说上 32 位的 JVM 堆内存可以到达 2^32，即 4GB，但实际上会比这个小很多。不同操作系统之间不同，如 Windows 系统大约 1.5 GB，Solaris 大约 3GB。64 位 JVM允许指定最大的堆内存，理论上可以达到 2^64，这是一个非常大的数字，实际上你可以指定堆内存大小到 100GB。甚至有的 JVM，如 Azul，堆内存到 1000G 都是可能的。
-
-### **“a==b”和”a.equals(b)”有什么区别？**
-
-如果 a 和 b 都是对象，则 a==b 是比较两个对象的引用，只有当 a 和 b 指向的是堆中的同一个对象才会返回 true，而 a.equals(b) 是进行逻辑比较，所以通常需要重写该方法来提供逻辑一致性的比较。例如，String 类重写 equals() 方法，所以可以用于两个不同对象，但是包含的字母相同的比较。
-
-### a.hashCode() 有什么用？与 a.equals(b) 有什么关系？
-
-hashCode() 方法是相应对象整型的 hash 值。它常用于基于 hash 的集合类，如 Hashtable、HashMap、LinkedHashMap等等。它与 equals() 方法关系特别紧密。根据 Java 规范，两个使用 equal() 方法来判断相等的对象，必须具有相同的 hash code。
-
-### HashCode（）与equals的关系？？
-
-
-答：
-1)、hashcode是object类的一个方法，返回值是该对象的哈希码值，同一个对象的哈希码值一定相等，但是不同的对象的哈希码值也是有可能相等的。
-
-
-2)、equals同样是object类的一个方法，比较两个对象是否是同一个对象，其内部实现是通过==来比较两个对象的内存地址是否相等的，如果需要比较两个对象的内容是否相等，则需要重写equals方法，重写的equals方法用于比较对象的内容是否相等。
-
-3)、因此如果两个对象根据equals()方法比较相等，那么这两个对象的hashcode()返回值一定相等，如果两个对象的hashcode()返回值相等，其equals()比较结果也不一定是true。
 
 ### final、finalize 和 finally 的不同之处？
 
@@ -647,143 +765,9 @@ final 是一个修饰符，可以修饰变量、方法和类。如果 final 修�
 
 公共静态不可变（public static final ）变量也就是我们所说的编译期常量，这里的 public 可选的。实际上这些变量在编译时会被替换掉，因为编译器知道这些变量的值，并且知道这些变量在运行时不能改变。这种方式存在的一个问题是你使用了一个内部的或第三方库中的公有编译时常量，但是这个值后面被其他人改变了，但是你的客户端仍然在使用老的值，甚至你已经部署了一个新的jar。为了避免这种情况，当你在更新依赖 JAR 文件时，确保重新编译你的程序。
 
-### String类通过new创建和直接赋值字符串的区别？？
 
-**答：**
 
-方式一：String a = “aaa” ;方式二：String b = new String(“aaa”);
 
-- 两种方式都能创建字符串对象，但方式一要比方式二更优。
-- 因为字符串是保存在常量池中的，而通过new创建的对象会存放在堆内存中。
-
-**一：常量池中已经有字符串常量”aaa”**
-
-- 通过方式一创建对象，程序运行时会在常量池中查找”aaa”字符串，将找到的”aaa”字符串的地址赋给a。
-- 通过方式二创建对象，无论常量池中有没有”aaa”字符串，程序都会在堆内存中开辟一片新空间存放新对象。
-
-**二：常量池中没有字符串常量”aaa”**
-
-- 通过方式一创建对象，程序运行时会将”aaa”字符串放进常量池，再将其地址赋给a。
-- 通过方式二创建对象，程序会在堆内存中开辟一片新空间存放新对象，同时会将”aaa”字符串放入常量池，相当于创建了两个对象。
-
-### Java中Int与integer用==比较详解？？
-
-**答：**
-
-①、无论如何，Integer与new Integer不会相等。不会经历拆箱过程，因为它们存放内存的位置不一样。（要看具体位置，可以看看这篇文章：点击打开链接）
-
-②、两个都是非new出来的Integer，如果数在-128到127之间，则是true,否则为false。
-
-③、两个都是new出来的,则为false。
-
-④、int和integer(new或非new)比较，都为true，因为会把Integer自动拆箱为int，其实就是相当于两个int类型比较。
-
-### **JDK 和 JRE 有什么区别？**
-
-- JDK：Java Development Kit 的简称，java 开发工具包，提供了 java 的开发环境和运行环境。
-- JRE：Java Runtime Environment 的简称，java 运行环境，为 java 的运行提供了所需环境。
-
-具体来说 JDK 其实包含了 JRE，同时还包含了编译 java 源码的编译器 javac，还包含了很多 java 程序调试和分析的工具。简单来说：如果你需要运行 java 程序，只需安装 JRE 就可以了，如果你需要编写 java 程序，需要安装 JDK。
-
-### == 和 equals 的区别是什么？
-
-**== 解读**
-
-对于基本类型和引用类型 == 的作用效果是不同的，如下所示：
-
-- 基本类型：比较的是值是否相同；
-- 引用类型：比较的是引用是否相同；
-
-代码示例：
-
-```
-String x = "string";
-String y = "string";
-String z = new String("string");
-System.out.println(x==y); // true
-System.out.println(x==z); // false
-System.out.println(x.equals(y)); // true
-System.out.println(x.equals(z)); // true
-```
-
-代码解读：因为 x 和 y 指向的是同一个引用，所以 == 也是 true，而 new String()方法则重写开辟了内存空间，所以 == 结果为 false，而 equals 比较的一直是值，所以结果都为 true。
-
-**equals 解读**
-
-equals 本质上就是 ==，只不过 String 和 Integer 等重写了 equals 方法，把它变成了值比较。看下面的代码就明白了。
-
-首先来看默认情况下 equals 比较一个有相同值的对象，代码如下：
-
-```
-class Cat {
-    public Cat(String name) {
-        this.name = name;
-    }
- 
-    private String name;
- 
-    public String getName() {
-        return name;
-    }
- 
-    public void setName(String name) {
-        this.name = name;
-    }
-}
- 
-Cat c1 = new Cat("王磊");
-Cat c2 = new Cat("王磊");
-System.out.println(c1.equals(c2)); // false
-```
-
-输出结果出乎我们的意料，竟然是 false？这是怎么回事，看了 equals 源码就知道了，源码如下：
-
-```
-public boolean equals(Object obj) {
-    return (this == obj);
-}
-```
-
-原来 equals 本质上就是 ==。
-
-那问题来了，两个相同值的 String 对象，为什么返回的是 true？代码如下：
-
-```
-String s1 = new String("老王");
-String s2 = new String("老王");
-System.out.println(s1.equals(s2)); // true
-```
-
-同样的，当我们进入 String 的 equals 方法，找到了答案，代码如下：
-
-```
-
-```
-
-原来是 String 重写了 Object 的 equals 方法，把引用比较改成了值比较。
-
-总结 ：== 对于基本类型来说是值比较，对于引用类型来说是比较的是引用；而 equals 默认情况下是引用比较，只是很多类重新了 equals 方法，比如 String、Integer 等把它变成了值比较，所以一般情况下 equals 比较的是值是否相等。
-
-### 两个对象的 hashCode()相同，则 equals()也一定为 true，对吗？
-
-不对，两个对象的 hashCode()相同，equals()不一定 true。
-
-代码示例：
-
-```
-String str1 = "通话";
-String str2 = "重地";
-System.out.println(String.format("str1：%d | str2：%d",  str1.hashCode(),str2.hashCode()));
-System.out.println(str1.equals(str2));
-```
-
-执行的结果：
-
-```
-
-```
-
-代码解读：很显然“通话”和“重地”的 hashCode() 相同，然而 equals() 则为 false，因为在散列表中，hashCode()相等即两个键值对的哈希值相等，然而哈希值相等，并不一定能得出键值对相等。
 
 ### final 在 java 中有什么作用？
 
@@ -797,19 +781,9 @@ final 修饰的变量叫常量，常量必须初始化，初始化之后值就�
 
 等于 -1，因为在数轴上取值时，中间值（0.5）向右取整，所以正 0.5 是往上取整，负 0.5 是直接舍弃。
 
-### String 属于基础的数据类型吗？
 
-String 不属于基础类型，基础类型有 8 种：byte、boolean、char、short、int、float、long、double，而 String 属于对象。
 
-### java 中操作字符串都有哪些类？它们之间有什么区别？
-
-操作字符串的类有：String、StringBuffer、StringBuilder。
-
-String 和 StringBuffer、StringBuilder 的区别在于 String 声明的是不可变的对象，每次操作都会生成新的 String 对象，然后将指针指向新的 String 对象，而 StringBuffer、StringBuilder 可以在原有对象的基础上进行操作，所以在经常改变字符串内容的情况下最好不要使用 String。
-
-StringBuffer 和 StringBuilder 最大的区别在于，StringBuffer 是线程安全的，而 StringBuilder 是非线程安全的，但 StringBuilder 的性能却高于 StringBuffer，所以在单线程环境下推荐使用 StringBuilder，多线程环境下推荐使用 StringBuffer。
-
-### . String str="i"与 String str=new String("i")一样吗？
+### String str="i"与 String str=new String("i")一样吗？
 
 不一样，因为内存的分配方式不一样。String str="i"的方式，java 虚拟机会将其分配到常量池中；而 String str=new String("i") 则会被分到堆内存中。
 
@@ -2749,7 +2723,37 @@ JVM 中堆和栈属于不同的内存区域，使用目的也不同。栈常用�
 
 ![](..\..\images\java\jvm-2.jpg)
 
+### 64 位 JVM 中，int 的长度是多数？
 
+Java 中，int 类型变量的长度是一个固定值，与平台无关，都是 32 位。意思就是说，在 32 位 和 64 位 的Java 虚拟机中，int 类型的长度是相同的。
+
+### Serial 与 Parallel GC之间的不同之处？
+
+Serial 与 Parallel 在GC执行的时候都会引起 stop-the-world。它们之间主要不同 serial 收集器是默认的复制收集器，执行 GC 的时候只有一个线程，而 parallel 收集器使用多个 GC 线程来执行。
+
+### 32 位和 64 位的 JVM，int 类型变量的长度是多数？
+
+32 位和 64 位的 JVM 中，int 类型变量的长度是相同的，都是 32 位或者 4 个字节。
+
+### Java 中 WeakReference 与 SoftReference的区别？
+
+虽然 WeakReference 与 SoftReference 都有利于提高 GC 和 内存的效率，但是 WeakReference ，一旦失去最后一个强引用，就会被 GC 回收，而软引用虽然不能阻止被回收，但是可以延迟到 JVM 内存不足的时候。
+
+### WeakHashMap 是怎么工作的？
+
+WeakHashMap 的工作与正常的 HashMap 类似，但是使用弱引用作为 key，意思就是当 key 对象没有任何引用时，key/value 将会被回收。
+
+### JVM 选项 -XX:+UseCompressedOops 有什么作用？为什么要使用？
+
+当你将你的应用从 32 位的 JVM 迁移到 64 位的 JVM 时，由于对象的指针从 32 位增加到了 64 位，因此堆内存会突然增加，差不多要翻倍。这也会对 CPU 缓存（容量比内存小很多）的数据产生不利的影响。因为，迁移到 64 位的 JVM 主要动机在于可以指定最大堆大小，通过压缩 OOP 可以节省一定的内存。通过 -XX:+UseCompressedOops 选项，JVM 会使用 32 位的 OOP，而不是 64 位的 OOP。
+
+### 怎样通过 Java 程序来判断 JVM 是 32 位 还是 64 位？
+
+你可以检查某些系统属性如 sun.arch.data.model 或 os.arch 来获取该信息。
+
+### 32 位 JVM 和 64 位 JVM 的最大堆内存分别是多数？
+
+理论上说上 32 位的 JVM 堆内存可以到达 2^32，即 4GB，但实际上会比这个小很多。不同操作系统之间不同，如 Windows 系统大约 1.5 GB，Solaris 大约 3GB。64 位 JVM允许指定最大的堆内存，理论上可以达到 2^64，这是一个非常大的数字，实际上你可以指定堆内存大小到 100GB。甚至有的 JVM，如 Azul，堆内存到 1000G 都是可能的。
 
 ## 8.反射
 
