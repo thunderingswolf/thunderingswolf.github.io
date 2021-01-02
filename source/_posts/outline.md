@@ -1,6 +1,6 @@
 ---
-title: 大纲
-date: 2020-01-02 10:26:30
+title: 写作大纲
+date: 2021-01-02 10:26:30
 categories:
 - 技术
 tags:
