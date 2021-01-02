@@ -10,215 +10,214 @@ tags:
 
 ![hexo-java](../../images/java-outline/hexo-java.jpg)
 
-- java基础系列
-  - java类库
-    - 内置类库
-      - java.基础
-        - java.lang
-        - java.util
-        - java.io
-        - java.nio
-        - java.net
-        - java.beans
-        - java.text
-        - java.applet
-        - java.awt
-      - javax.扩展
-        - javax.swing
-        - javax.net
-    - 外部类库
-      - 日志
-        - slf4j
-      - JSON解析库
-        - Jackson
-      - 单元测试库
-        - JUnit
-        - Mockito
-        - JUnit Runner
-        - junit.framework
-      - 通用类库
-        - Apache Commons
-        - Google Guava
-      - Http 库
-        - Apache HttpClient
-        - Apache HttpCore
-      - XML解析库
-        - Xerces
-        - JAXB
-        - Dom4j
-        - JAXP
-        - Xstream
-      - Excel读写库
-        - Apache POI API
-      - 字节码库
-        - javassist
-        - Cglib Nodep
-      - 数据库连接池库
-        - DBCP
-        - C3p0
-        - Commons Pool
-      - 消息传递库
-        - Tibco RV
-      - PDF处理库
-        - iText
-        - Apache FOP
-          - 
-      - 日期和时间库
-        - JodaTime JAVA8后可以放弃
-      - 集合类库
-        - Apache Commons Collections
-        - Trove
-        - Google Collections
-        - Goldman Sachs collections
-        - FastUtil
-      - 邮件API
-        - Apache Commons Email
-      - HTML解析库
-        - JSoup
-      - 加密库
-        - Commons Codec
-      - 嵌入式SQL数据库库
-        - H2
-        - Apache Derby
-        - HSQL
-      - JDBC故障诊断库
-        - P6spy
-      - 序列化库
-        - Google Protocol Buffer
-      - 网络库
-        - Netty
-        - Apache MINA
-    - 类库家族
-      - org.apache
-        - hadoop
-        - commons
-          - .lang3
-          - lang
-        - shiro
-        - http
-          - .client
-          - .impl
-        - lucecn
-        - ibatis
-        - maven
-      - org.springframework
-      - com.google
-        - inject
-        - Guice是Google开发的一个轻量级，基于Java5（主要运用泛型与注释特性）的依赖注入框架(IOC)。Guice非常小而且快。Guice是类型安全的，它能够对构造函数，属性，方法（包含任意个参数的任意方法，而不仅仅是setter方法）进行注入。
-      - org.junit
-        - Runner
-      - org.eclipse
-        - jetty
-          - Jetty是一个纯粹的基于Java的网页服务器和Java Servlet容器。尽管网页服务器通常用来为人们呈现文档，但是Jetty通常在较大的软件框架中用于计算机与计算机之间的通信。
-      - com.fasterxml
-        - jackson
-      - org.elasticsearch
-      - org.mockito
-      - io.netty
-        - channel
-        - handler
-        - Netty 是一个基于NIO的客户、服务器端编程框架，使用Netty 可以确保你快速和简单的开发出一个网络应用，例如实现了某种协议的客户、服务端应用。Netty相当于简化和流线化了网络应用的编程开发过程，例如：基于TCP和UDP的socket服务开发。
-      - com.amazonaws
-        - services
-      - org.jboss
-        - netty
-      - com.netflix
-      - org.harmcrest
-      - org.codehaus
-      - com.alibaba
-        - otter
-          - otter是一个基于数据库增量日志解析，准实时同步到本机房或异地机房的mysql/oracle数据库. 一个分布式数据库同步系统。
-      - org.slf4j
-      - com.intellij
-      - org.hibernate
-      - org.bouncycastle
-      - io.undertow
-  - 关键技术
-    - Java 基础
-      - 数据类型
-      - String
-      - 运算
-      - 关键字
-      - Object
-      - 继承
-      - 反射
-      - 异常
-      - 泛型
-      - 注解
-      - 特性
-    - Java 容器（集合）
-      - Map & Collection
-      - 设计模式
-      - 源码
-    - Java 并发
-      - 线程...
-    - Java I/O
-      - 磁盘操作
-      - 字节操作
-      - 字符操作
-      - 对象操作
-      - 网络操作
-      - NIO
-    - java虚拟机
-      - 特性
-        - 优势
-          - 平台无关、安全、可网络移动
-        - 缺点
-          - 性能
-          - 内存管理，不明确
-          - 线程调度，不明确
-          - 反编译容易
-            - 引用、描述信息多
-              - 混淆器
-      - 类加载器
-        - 字节码文件结构
-        - 双亲委派机制
-        - 类的生命周期
-          - 加载，验证，准备，解析，初始化
-          - 使用、卸载
-        - 类初始化时机
-          - 主动引用
-          - 被动引用
-        - 类加载器分类
-          - 启动类加载器
-          - 扩展类加载器
-          - 应用程序类加载器
-          - 自定义类加载器实现
-      - 运行时数据区
-        - 程序计数器
-        - 虚拟机栈
-        - 本地方法栈
-        - 方法区（共享）
-          - 运行时常量池
-        - 堆（共享）
-          - 垃圾回收
-            - 判断生死
-              - 引用计数算法
-              - 可达性分析算法
-              - 方法区的回收
-              - finalize()
-            - 引用类型
-              - 强软弱虚
-            - 垃圾收集算法
-              - 标记-清除算法
-              - 复制算法
-              - 标记-整理算法
-              - 分代收集算法
-            - 垃圾收集器
-              - Serial收集器
-              - ParNew收集器
-              - Parallel Scavenge收集器
-              - Serial Old收集器
-              - Parallel Old收集器
-              - CMS收集器
-              - G1收集器
-          - 内存分配及回收策略
-            - Minor GC 和 Full GC
-            - 内存分配策略
-            - Full GC 的触发条件
-        - 直接内存
-          - NIO DirectByteBuffer
-      - 执行引擎
-  - 编程规范
-    - Alibaba
-    - Google
+- java类库
+  - 内置类库
+    - java.基础
+      - java.lang
+      - java.util
+      - java.io
+      - java.nio
+      - java.net
+      - java.beans
+      - java.text
+      - java.applet
+      - java.awt
+    - javax.扩展
+      - javax.swing
+      - javax.net
+  - 外部类库
+    - 日志
+      - slf4j
+    - JSON解析库
+      - Jackson
+    - 单元测试库
+      - JUnit
+      - Mockito
+      - JUnit Runner
+      - junit.framework
+    - 通用类库
+      - Apache Commons
+      - Google Guava
+    - Http 库
+      - Apache HttpClient
+      - Apache HttpCore
+    - XML解析库
+      - Xerces
+      - JAXB
+      - Dom4j
+      - JAXP
+      - Xstream
+    - Excel读写库
+      - Apache POI API
+    - 字节码库
+      - javassist
+      - Cglib Nodep
+    - 数据库连接池库
+      - DBCP
+      - C3p0
+      - Commons Pool
+    - 消息传递库
+      - Tibco RV
+    - PDF处理库
+      - iText
+      - Apache FOP
+        - 
+    - 日期和时间库
+      - JodaTime JAVA8后可以放弃
+    - 集合类库
+      - Apache Commons Collections
+      - Trove
+      - Google Collections
+      - Goldman Sachs collections
+      - FastUtil
+    - 邮件API
+      - Apache Commons Email
+    - HTML解析库
+      - JSoup
+    - 加密库
+      - Commons Codec
+    - 嵌入式SQL数据库库
+      - H2
+      - Apache Derby
+      - HSQL
+    - JDBC故障诊断库
+      - P6spy
+    - 序列化库
+      - Google Protocol Buffer
+    - 网络库
+      - Netty
+      - Apache MINA
+  - 类库家族
+    - org.apache
+      - hadoop
+      - commons
+        - .lang3
+        - lang
+      - shiro
+      - http
+        - .client
+        - .impl
+      - lucecn
+      - ibatis
+      - maven
+    - org.springframework
+    - com.google
+      - inject
+      - Guice是Google开发的一个轻量级，基于Java5（主要运用泛型与注释特性）的依赖注入框架(IOC)。Guice非常小而且快。Guice是类型安全的，它能够对构造函数，属性，方法（包含任意个参数的任意方法，而不仅仅是setter方法）进行注入。
+    - org.junit
+      - Runner
+    - org.eclipse
+      - jetty
+        - Jetty是一个纯粹的基于Java的网页服务器和Java Servlet容器。尽管网页服务器通常用来为人们呈现文档，但是Jetty通常在较大的软件框架中用于计算机与计算机之间的通信。
+    - com.fasterxml
+      - jackson
+    - org.elasticsearch
+    - org.mockito
+    - io.netty
+      - channel
+      - handler
+      - Netty 是一个基于NIO的客户、服务器端编程框架，使用Netty 可以确保你快速和简单的开发出一个网络应用，例如实现了某种协议的客户、服务端应用。Netty相当于简化和流线化了网络应用的编程开发过程，例如：基于TCP和UDP的socket服务开发。
+    - com.amazonaws
+      - services
+    - org.jboss
+      - netty
+    - com.netflix
+    - org.harmcrest
+    - org.codehaus
+    - com.alibaba
+      - otter
+        - otter是一个基于数据库增量日志解析，准实时同步到本机房或异地机房的mysql/oracle数据库. 一个分布式数据库同步系统。
+    - org.slf4j
+    - com.intellij
+    - org.hibernate
+    - org.bouncycastle
+    - io.undertow
+- 关键技术
+  - Java 基础
+    - 数据类型
+    - String
+    - 运算
+    - 关键字
+    - Object
+    - 继承
+    - 反射
+    - 异常
+    - 泛型
+    - 注解
+    - 特性
+  - Java 容器（集合）
+    - Map & Collection
+    - 设计模式
+    - 源码
+  - Java 并发
+    - 线程...
+  - Java I/O
+    - 磁盘操作
+    - 字节操作
+    - 字符操作
+    - 对象操作
+    - 网络操作
+    - NIO
+  - java虚拟机
+    - 特性
+      - 优势
+        - 平台无关、安全、可网络移动
+      - 缺点
+        - 性能
+        - 内存管理，不明确
+        - 线程调度，不明确
+        - 反编译容易
+          - 引用、描述信息多
+            - 混淆器
+    - 类加载器
+      - 字节码文件结构
+      - 双亲委派机制
+      - 类的生命周期
+        - 加载，验证，准备，解析，初始化
+        - 使用、卸载
+      - 类初始化时机
+        - 主动引用
+        - 被动引用
+      - 类加载器分类
+        - 启动类加载器
+        - 扩展类加载器
+        - 应用程序类加载器
+        - 自定义类加载器实现
+    - 运行时数据区
+      - 程序计数器
+      - 虚拟机栈
+      - 本地方法栈
+      - 方法区（共享）
+        - 运行时常量池
+      - 堆（共享）
+        - 垃圾回收
+          - 判断生死
+            - 引用计数算法
+            - 可达性分析算法
+            - 方法区的回收
+            - finalize()
+          - 引用类型
+            - 强软弱虚
+          - 垃圾收集算法
+            - 标记-清除算法
+            - 复制算法
+            - 标记-整理算法
+            - 分代收集算法
+          - 垃圾收集器
+            - Serial收集器
+            - ParNew收集器
+            - Parallel Scavenge收集器
+            - Serial Old收集器
+            - Parallel Old收集器
+            - CMS收集器
+            - G1收集器
+        - 内存分配及回收策略
+          - Minor GC 和 Full GC
+          - 内存分配策略
+          - Full GC 的触发条件
+      - 直接内存
+        - NIO DirectByteBuffer
+    - 执行引擎
+- 编程规范
+  - Alibaba
+  - Google
