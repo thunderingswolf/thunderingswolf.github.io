@@ -8,22 +8,25 @@ tags:
 - outline
 ---
 
-# 人生-life
+# 人生
+
+- life
 
 # 内功-基础
 
+- algorithm
 - os
   - linux
   - windows
-- ds
-- algorithm
 - design
+- ds
 - se-software engineering
 - network
   - ccna
 
 # 招式-技术
 
+- front
 - java
 - bigdate
   - hadoop
@@ -34,12 +37,10 @@ tags:
   - yarn
   - zookeeper
   - hbase
-
 - graph
   - janusgraph
   - neo4j
   - orientdb
-
 - db
   - mysql
   - postgres
@@ -51,13 +52,13 @@ tags:
 - opm-Operation and Maintenance
   - docker
   - k8s
-  - jekins
+  - jenkins
   - bamboo
-
 - tool
-  - digtalOcean
+  - digtal
   - hexo
   - markdown
 
 # 面试
 
+- interview
