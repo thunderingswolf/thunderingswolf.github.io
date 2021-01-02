@@ -1,9 +1,8 @@
 ---
 layout: 'n'
 title: Hexo博客搭建
-date: 2020-06-13 22:09:43
+date: 2021-01-01 22:09:43
 tags: 
-- 技术
 - Hexo
 - Next
 ---
