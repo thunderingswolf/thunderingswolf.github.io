@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha256-CTSx/A06dm1B063156EVh15m6Y67pAjZZaQc89LLSrU=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"xyzy.pro","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.18.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="java基础java基础最重要的资料就是官方白皮书，诸多基础概念，白皮书写的都比较详细，不可忽略的内容。如需细品的Jave SE Platform 概览图： 概念Java Runtime Environment (JRE)Java Runtime Environment (JRE) 提供运行用 Java 编程语言编写的应用和小程序所需的库、Java 虚拟机和其他组件。此外，JRE 还包括两项关键的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="java基础">
+<meta property="og:url" content="http://xyzy.pro/2021/01/02/java/java-%E5%9F%BA%E7%A1%80/index.html">
+<meta property="og:site_name" content="信仰之跃">
+<meta property="og:description" content="java基础java基础最重要的资料就是官方白皮书，诸多基础概念，白皮书写的都比较详细，不可忽略的内容。如需细品的Jave SE Platform 概览图： 概念Java Runtime Environment (JRE)Java Runtime Environment (JRE) 提供运行用 Java 编程语言编写的应用和小程序所需的库、Java 虚拟机和其他组件。此外，JRE 还包括两项关键的">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-01-02T13:42:30.000Z">
+<meta property="article:modified_time" content="2023-10-10T05:54:00.382Z">
+<meta property="article:author" content="程序员老冯">
+<meta property="article:tag" content="outline">
+<meta property="article:tag" content="java">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://xyzy.pro/2021/01/02/java/java-%E5%9F%BA%E7%A1%80/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://xyzy.pro/2021/01/02/java/java-%E5%9F%BA%E7%A1%80/","path":"2021/01/02/java/java-基础/","title":"java基础"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>java基础 | 信仰之跃</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">信仰之跃</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">时间的朋友</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section">首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section">关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section">标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section">分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section">归档</a></li><li class="menu-item menu-item-schedule"><a href="/schedule/" rel="section">日程表</a></li><li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section">站点地图</a></li><li class="menu-item menu-item-commonweal"><a href="/404/" rel="section">公益 404</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#java%E5%9F%BA%E7%A1%80"><span class="nav-number">1.</span> <span class="nav-text">java基础</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A6%82%E5%BF%B5"><span class="nav-number">1.1.</span> <span class="nav-text">概念</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Java-Runtime-Environment-JRE"><span class="nav-number">1.1.1.</span> <span class="nav-text">Java Runtime Environment (JRE)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Java-Development-Kit-JDK"><span class="nav-number">1.1.2.</span> <span class="nav-text">Java Development Kit (JDK)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Java-SE-API"><span class="nav-number">1.1.3.</span> <span class="nav-text">Java SE API</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Java-%E8%99%9A%E6%8B%9F%E6%9C%BA"><span class="nav-number">1.1.4.</span> <span class="nav-text">Java 虚拟机</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Java-%E5%B9%B3%E5%8F%B0%E5%B7%A5%E5%85%B7"><span class="nav-number">1.1.5.</span> <span class="nav-text">Java 平台工具</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%AA%E4%BA%BA%E7%90%86%E8%A7%A3"><span class="nav-number">1.2.</span> <span class="nav-text">个人理解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="nav-number">1.3.</span> <span class="nav-text">数据类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#String"><span class="nav-number">1.4.</span> <span class="nav-text">String</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%90%E7%AE%97"><span class="nav-number">1.5.</span> <span class="nav-text">运算</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B3%E9%94%AE%E5%AD%97"><span class="nav-number">1.6.</span> <span class="nav-text">关键字</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Object"><span class="nav-number">1.7.</span> <span class="nav-text">Object</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%A7%E6%89%BF"><span class="nav-number">1.8.</span> <span class="nav-text">继承</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%8D%E5%B0%84"><span class="nav-number">1.9.</span> <span class="nav-text">反射</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%82%E5%B8%B8"><span class="nav-number">1.10.</span> <span class="nav-text">异常</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B3%9B%E5%9E%8B"><span class="nav-number">1.11.</span> <span class="nav-text">泛型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B3%A8%E8%A7%A3"><span class="nav-number">1.12.</span> <span class="nav-text">注解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%89%B9%E6%80%A7"><span class="nav-number">1.13.</span> <span class="nav-text">特性</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">程序员老冯</p>
+  <div class="site-description" itemprop="description">岁月似乎终于让他找到了自己的形状，长成了一种稳定自在的样子</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">分类</span>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">标签</span>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://xyzy.pro/2021/01/02/java/java-%E5%9F%BA%E7%A1%80/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="程序员老冯">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="信仰之跃">
+      <meta itemprop="description" content="岁月似乎终于让他找到了自己的形状，长成了一种稳定自在的样子">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="java基础 | 信仰之跃">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          java基础
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-01-02 21:42:30" itemprop="dateCreated datePublished" datetime="2021-01-02T21:42:30+08:00">2021-01-02</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-10-10 13:54:00" itemprop="dateModified" datetime="2023-10-10T13:54:00+08:00">2023-10-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h1 id="java基础"><a href="#java基础" class="headerlink" title="java基础"></a>java基础</h1><p>java基础最重要的资料就是官方白皮书，诸多基础概念，白皮书写的都比较详细，不可忽略的内容。如需细品的Jave SE Platform 概览图：</p>
+<h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><h3 id="Java-Runtime-Environment-JRE"><a href="#Java-Runtime-Environment-JRE" class="headerlink" title="Java Runtime Environment (JRE)"></a><a target="_blank" rel="noopener" href="http://docs.oracle.com/javase/8/docs/technotes/guides/index.html#jre-jdk">Java Runtime Environment (JRE)</a></h3><p>Java Runtime Environment (JRE) 提供运行用 Java 编程语言编写的应用和小程序所需的库、Java 虚拟机和其他组件。此外，JRE 还包括两项关键的部署技术：<a target="_blank" rel="noopener" href="https://www.oracle.com/technetwork/java/plugin-137649.html?ssSourceSiteId=otncn">Java 插件</a> — 使小程序可以在常用浏览器中运行；以及 Java Web Start — 通过网络部署独立的应用。它还是用于企业软件开发和部署的 Java 2 Platform, Enterprise Edition (J2EE) 的基础。JRE 不包含用于开发应用和小程序的工具和实用程序，如编译器或调试器。</p>
+<h3 id="Java-Development-Kit-JDK"><a href="#Java-Development-Kit-JDK" class="headerlink" title="Java Development Kit (JDK)"></a><a target="_blank" rel="noopener" href="http://docs.oracle.com/javase/8/docs/technotes/guides/index.html#jre-jdk">Java Development Kit (JDK)</a></h3><p>JDK 是 JRE 的超集，不但包含 JRE 中的所有内容，还包含开发应用和小程序所需的工具，如编译器和调试器。上面的示意图阐释了 Java SE 平台中的所有技术以及彼此之间关系。</p>
+<h3 id="Java-SE-API"><a href="#Java-SE-API" class="headerlink" title="Java SE API"></a><a target="_blank" rel="noopener" href="https://www.oracle.com/technetwork/cn/java/javase/documentation/api-jsp-136079-zhs.html">Java SE API</a></h3><p>Java SE 应用编程接口 (API) 定义了应用或小程序对编译后的 Java SE 类库中的功能请求和使用的方式。（Java SE 类库也是 Java SE 平台的一部分。）</p>
+<p>Java SE API 由核心技术、桌面（或客户端）技术以及其他技术组成。</p>
+<ul>
+<li>核心组件提供在数据库访问、安全性、远程方法调用 (RMI) 和通讯等关键领域编写强大的企业级程序的基本功能。</li>
+<li>桌面组件添加了全面的特性，帮助构建可为部署产品（如 Java 插件）、组件建模 API（如 JavaBeans）以及图形用户界面提供丰富用户体验的应用。</li>
+<li>其他组件完善了此功能。</li>
+</ul>
+<h3 id="Java-虚拟机"><a href="#Java-虚拟机" class="headerlink" title="Java 虚拟机"></a><a target="_blank" rel="noopener" href="https://www.oracle.com/technetwork/cn/java/javase/tech/index-jsp-136373-zhs.html">Java 虚拟机</a></h3><p><a target="_blank" rel="noopener" href="https://www.oracle.com/technetwork/cn/java/javase/tech/index-jsp-136373-zhs.html">Java 虚拟机</a>确保了 Java SE 平台的硬件和操作系统无关性、轻量级编译代码（字节码）和平台安全性。</p>
+<h3 id="Java-平台工具"><a href="#Java-平台工具" class="headerlink" title="Java 平台工具"></a><a target="_blank" rel="noopener" href="https://www.oracle.com/technetwork/java/javase/tech/tools-jsp-138765.html?ssSourceSiteId=otncn">Java 平台工具</a></h3><p>Java SE 平台可与一系列工具协同工作，这些工具包括集成开发环境 (IDE)、性能和测试工具以及性能监视工具。</p>
+<h2 id="个人理解"><a href="#个人理解" class="headerlink" title="个人理解"></a>个人理解</h2><p>java是一个很大的生态，写代码的时候只是从源代码的角度涉及很小一块，我把编出的代码看作是四方库；java整体上，核心流程大致涉及：四方库、三方库、二方库、编译器、类加载器、JVM。</p>
+<p>java程序的整体过程可以描述为：根据业务需要引入二方库、三方库，根据java语法编写源代码（四方库），完成后将源代码提交给编译器编译为字节码；使用java内置类加载器或自己编写的类加载器（四方库）加载字节码供jvm解释执行，jvm将字节码根据不同的操作系统平台解释成不同的机器指令，在操作系统允许的权限下，调用机器资源达到预期目标。</p>
+<p>细节过程并不严谨，且在这个过程中，继续分析：可分为-编写、编译、解释、执行；整个过程是由多个组件合作完成的，不同阶段参与度是不同的，比如四方库的编写，属于<strong>构建</strong>，自由发挥的空间比较大；编译器、类加载器、JVM环节如果已经选定，属于<strong>使用</strong>，多是优化配置；当然java白皮书中对各组件并没有十分严格的限制，jdk中也只是提供了某些默认实现，如果需要或者有能力，完全可以自行实现从编译器、类加载器、JVM相关组件，也确实有。有几点需要注意，并不是所有的组件都是java语言实现的，比如编译器、部分类加载器、JVM并不是Java实现的；二方库和三方库并没有明确的限定，二方库特指jdk中已经集成了的，比如derby；</p>
+<p>按照这条主线上涉及的组件或环节，再衍生分析对java的学习思路。</p>
+<p>依据语法，写出编译器能识别的内容，依据语言特性组织代码之间的关系；衍生出对操作系统内存、cpu、设备的操作，对数据结构、算法、设计模式的应用。依据对二方库、三方库的依赖，衍生出ant、maven、gradle等技术。自定义类加载器和提供第三方库的角度，衍生出各种第三方库，如spring、hadoop等生态。根据执行过程中优化需求，衍生出对jvm的内存结构、垃圾回收机制、垃圾收集器实现机制的了解。java的多线程特性，引出并发编程方面的需求，需要关注线程状态、多个线程通信、线程安全等内容。java的网络特性，衍生出对计算机网络协议方面的需求，如netty、rpc&#x2F;grpc等技术。数据的传递又涉及序列化、反序列化技术，如json、protobuf等格式。</p>
+<p>总而言之，技术的学习应当明确对一种技术，目标到底是使用还是构建。虽然构建有助于使用，但学习过程中并不是所有的技术都必须构建的，学习过程中尽量时刻明确定位，避免陷入其中。</p>
+<p>再谈具体的知识点，具体的知识点是为知识体系的构建服务的，解决问题的本质是在知识体系下选取合适的知识点应用到合适的位置和阶段上。</p>
+<p>java的生态很大，比如spring技术栈、hadoop技术栈都有足够多的内容供学习研究，但还是力求知其然知其所以然，知道自己从事或学习的知识在一颗大树的什么位置，向上向下都是有关联和方向的。</p>
+<p>计算机技术学习的路上有很多知识点，日新月异，变化繁多。但总有些东西是基础中的基础，万变不离其中，我们暂称其为内功，另外一些则是招式，当然并没有十分明确的界限。比如数据结构、算法、设计模式，这些大概可以称为内功，而编程语言、框架等则可称为招式。</p>
+<p>Java主线，所有均为对象，对象内容的存储内存的分配也是以堆为主；只是存在了一些特殊情况，比如基础类型、string，本地方法，即时编译等情况，无外乎是因为使用频率或效率、空间原因，做出的优化策略。所以java需要把握主线</p>
+<h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><p>基础数据类型：</p>
+<ul>
+<li>字符型（char）：16bit、‘\u0000–u\ffff’、‘\u0000’</li>
+<li>布尔型（boolean）：1bit、true&#x2F;false、false</li>
+<li>数值型<ul>
+<li>整数类型<ul>
+<li>字节（byte）：8bit、-128–127、0</li>
+<li>短整型（short）：16bit、-32768–32768、0</li>
+<li>整型（int）：32bit、–、0</li>
+<li>长整型（long）：64bit、–、0</li>
+</ul>
+</li>
+<li>浮点类型<ul>
+<li>浮点数（float）：32bit、–、0.0f</li>
+<li>双精度浮点数（double）：64bit、–、0.0d</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>引用数据类型：</p>
+<ul>
+<li>类（class）</li>
+<li>接口（interface）</li>
+<li>数组（array）</li>
+</ul>
+<h2 id="String"><a href="#String" class="headerlink" title="String"></a>String</h2><p>String 不属于基础类型， String 属于对象。</p>
+<p>String类中使用字符数组保存字符串，private　final　char　value[]，所以string对象是不可变的。</p>
+<p>String中的对象是不可变的，也就可以理解为常量，线程安全。</p>
+<h2 id="运算"><a href="#运算" class="headerlink" title="运算"></a>运算</h2><h2 id="关键字"><a href="#关键字" class="headerlink" title="关键字"></a>关键字</h2><h2 id="Object"><a href="#Object" class="headerlink" title="Object"></a>Object</h2><h2 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h2><h2 id="反射"><a href="#反射" class="headerlink" title="反射"></a>反射</h2><h2 id="异常"><a href="#异常" class="headerlink" title="异常"></a>异常</h2><h2 id="泛型"><a href="#泛型" class="headerlink" title="泛型"></a>泛型</h2><h2 id="注解"><a href="#注解" class="headerlink" title="注解"></a>注解</h2><h2 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h2><ol>
+<li><p>简单易学；</p>
+</li>
+<li><p>面向对象（封装，继承，多态）；</p>
+</li>
+<li><p>平台无关性（Java虚拟机实现平台无关性）；</p>
+</li>
+<li><p>可靠性；</p>
+</li>
+<li><p>安全性；</p>
+</li>
+<li><p>支持多线程（C++语言没有内置的多线程机制，因此必须调用操作系统的多线程功能来进行多线程程序设计，而Java语言却提供了多线程支持）；</p>
+</li>
+<li><p>支持网络编程并且很方便（Java语言诞生本身就是为简化网络编程设计的，因此Java语言不仅支持网络编程而且很方便）；</p>
+</li>
+<li><p>编译与解释并存；</p>
+</li>
+</ol>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/outline/" rel="tag"># outline</a>
+              <a href="/tags/java/" rel="tag"># java</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/01/02/spring/spring-outline/" rel="prev" title="spring大纲">
+                  <i class="fa fa-angle-left"></i> spring大纲
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2023/10/10/231010/" rel="next" title="231010">
+                  231010 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">程序员老冯</span>
+  </div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>
