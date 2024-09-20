@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha256-CTSx/A06dm1B063156EVh15m6Y67pAjZZaQc89LLSrU=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"xyzy.pro","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.18.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="一、配置 OS： Ubuntu 23.04 显卡： GeForce RTX 4060 内存： 64G 显卡驱动： 530.30.02 cuda: 12.1.0 cuDNN: 8.9.0  二、显卡驱动 安装1234方式1：系统-&gt;Software&amp;Updates-&gt;Additional Drivers ,选择Using NVIDIA driver metapackage fro">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ai开发环境搭建">
+<meta property="og:url" content="http://xyzy.pro/2024/02/21/ai/ai%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/index.html">
+<meta property="og:site_name" content="信仰之跃">
+<meta property="og:description" content="一、配置 OS： Ubuntu 23.04 显卡： GeForce RTX 4060 内存： 64G 显卡驱动： 530.30.02 cuda: 12.1.0 cuDNN: 8.9.0  二、显卡驱动 安装1234方式1：系统-&gt;Software&amp;Updates-&gt;Additional Drivers ,选择Using NVIDIA driver metapackage fro">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-02-21T06:28:05.000Z">
+<meta property="article:modified_time" content="2024-04-24T04:29:05.369Z">
+<meta property="article:author" content="程序员老冯">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://xyzy.pro/2024/02/21/ai/ai%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://xyzy.pro/2024/02/21/ai/ai%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/","path":"2024/02/21/ai/ai开发环境搭建/","title":"ai开发环境搭建"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>ai开发环境搭建 | 信仰之跃</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">信仰之跃</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">时间的朋友</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section">首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section">关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section">标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section">分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section">归档</a></li><li class="menu-item menu-item-schedule"><a href="/schedule/" rel="section">日程表</a></li><li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section">站点地图</a></li><li class="menu-item menu-item-commonweal"><a href="/404/" rel="section">公益 404</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E9%85%8D%E7%BD%AE"><span class="nav-number">1.</span> <span class="nav-text">一、配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E6%98%BE%E5%8D%A1%E9%A9%B1%E5%8A%A8"><span class="nav-number">2.</span> <span class="nav-text">二、显卡驱动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89%E3%80%81CUDA"><span class="nav-number">3.</span> <span class="nav-text">三、CUDA</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89%E3%80%81cuDNN"><span class="nav-number">4.</span> <span class="nav-text">三、cuDNN</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%9B%E3%80%81CUDA%E4%B8%8ECUDNN%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="nav-number">5.</span> <span class="nav-text">四、CUDA与CUDNN的关系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%94%E3%80%81Pytorch"><span class="nav-number">6.</span> <span class="nav-text">五、Pytorch</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%94%E3%80%81%E6%98%BE%E5%8D%A1%E9%A9%B1%E5%8A%A8-CUDA-cuDNN-Pytorch%E7%89%88%E6%9C%AC%E9%80%89%E6%8B%A9"><span class="nav-number">7.</span> <span class="nav-text">五、显卡驱动 &amp; CUDA &amp; cuDNN &amp; Pytorch版本选择</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">程序员老冯</p>
+  <div class="site-description" itemprop="description">岁月似乎终于让他找到了自己的形状，长成了一种稳定自在的样子</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">9</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/thunderingswolf" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;thunderingswolf" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://xyzy.pro/2024/02/21/ai/ai%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="程序员老冯">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="信仰之跃">
+      <meta itemprop="description" content="岁月似乎终于让他找到了自己的形状，长成了一种稳定自在的样子">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="ai开发环境搭建 | 信仰之跃">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          ai开发环境搭建
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2024-02-21 14:28:05" itemprop="dateCreated datePublished" datetime="2024-02-21T14:28:05+08:00">2024-02-21</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2024-04-24 12:29:05" itemprop="dateModified" datetime="2024-04-24T12:29:05+08:00">2024-04-24</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h3 id="一、配置"><a href="#一、配置" class="headerlink" title="一、配置"></a>一、配置</h3><ul>
+<li>OS： Ubuntu 23.04</li>
+<li>显卡： GeForce RTX 4060</li>
+<li>内存： 64G</li>
+<li>显卡驱动： 530.30.02</li>
+<li>cuda: 12.1.0</li>
+<li>cuDNN: 8.9.0</li>
+</ul>
+<h3 id="二、显卡驱动"><a href="#二、显卡驱动" class="headerlink" title="二、显卡驱动"></a>二、显卡驱动</h3><ol>
+<li>安装<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">方式1：</span><br><span class="line">系统-&gt;Software&amp;Updates-&gt;Additional Drivers ,选择Using NVIDIA driver metapackage from nvidia-driver-525(proprietary) , Apply Changes即可。</span><br><span class="line">方式2：</span><br><span class="line">卸载干净nvidia显卡驱动，由cuda安装（目前采用这种方式）</span><br></pre></td></tr></table></figure></li>
+<li>验证<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">（1）查看显卡型号</span><br><span class="line">    $ lspci | grep -i nvidia</span><br><span class="line">（2）查看显卡驱动版本</span><br><span class="line">    $ cat /proc/driver/nvidia/version</span><br><span class="line">（3）详细的NVIDIA显卡信息</span><br><span class="line">    $ nvidia-smi (-L)</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="三、CUDA"><a href="#三、CUDA" class="headerlink" title="三、CUDA"></a>三、CUDA</h3><p>CUDA全称Compute Unified Device Architecture，是由NVIDIA推出的一种计算架构，通过CUDA我们可以使用NVIDIA GPU进行计算。</p>
+<p>CUDA Toolkit视为开发CUDA程序的工具包（类似于VS之于C++），但我们不仅在开发CUDA程序时需要CUDA Toolkit，很多时候，由于硬件、软件环境的不同，他人编译好的CUDA程序我们是不能直接运行的，于是我们就要在自己的计算机上编译他人写好的CUDA代码</p>
+<ol>
+<li>安装<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">下载地址获取：</span><br><span class="line">    https://developer.nvidia.com/cuda-toolkit-archive 选择版本--&gt;runfile(local)</span><br><span class="line">下载：</span><br><span class="line">    wget https://developer.download.nvidia.com/compute/cuda/12.1.0/local_installers/cuda_12.1.0_530.30.02_linux.run</span><br><span class="line">安装：</span><br><span class="line">    sudo sh cuda_12.1.0_530.30.02_linux.run</span><br><span class="line">配置：</span><br><span class="line">    /usr/local目录下软连接设置（切换）</span><br><span class="line">        查看指向：stat cuda</span><br><span class="line">        删除链接：sudo rm -rf cuda</span><br><span class="line">        创建链接：sudo ln -s /usr/local/cuda-12.0 /usr/local/cuda</span><br><span class="line">                sudo ln -s /usr/local/cuda-12.1 /usr/local/cuda</span><br><span class="line">    ~/.bashrc 配置环境变量</span><br><span class="line">        export PATH=$PATH:/usr/local/cuda/bin</span><br><span class="line">        export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64</span><br></pre></td></tr></table></figure></li>
+<li>验证<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">方式1：</span><br><span class="line">    nvcc -V </span><br><span class="line">    输出Cuda版本等信息</span><br><span class="line">方式2：</span><br><span class="line">    cuda-samples/Samples/1_Utilities/deviceQuery</span><br><span class="line">        make clean &amp; make</span><br><span class="line">        ./deviceQuery</span><br><span class="line">    输出Result = PASS</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="三、cuDNN"><a href="#三、cuDNN" class="headerlink" title="三、cuDNN"></a>三、cuDNN</h3><p>NVIDIA cuDNN是用于深度神经网络的GPU加速库。它强调性能、易用性和低内存开销。NVIDIA cuDNN可以集成到更高级别的机器学习框架中，如谷歌的Tensorflow、加州大学伯克利分校的流行caffe软件。简单的插入式设计可以让开发人员专注于设计和实现神经网络模型，而不是简单调整性能，同时还可以在GPU上实现高性能现代并行计算。</p>
+<ol>
+<li>安装<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">下载地址获取：</span><br><span class="line">    https://developer.nvidia.com/rdp/cudnn-archive选择cudnn-linux-x86_64对应</span><br><span class="line">下载：</span><br><span class="line">    wget https://developer.download.nvidia.com/compute/cudnn/redist/cudnn/linux-x86_64/cudnn-linux-x86_64-9.0.0.312_cuda12-archive.tar.xz</span><br><span class="line">安装：</span><br><span class="line">解压下载好的tar.xz文件</span><br><span class="line">    tar -xvf cudnn-linux-xxx.tar.xz</span><br><span class="line">将解压的文件拷贝到cuda对应目录，进行cudnn的安装</span><br><span class="line">    sudo cp include/* /usr/local/cuda-12.1/include</span><br><span class="line">    sudo cp lib/libcudnn* /usr/local/cuda-12.1/lib64</span><br><span class="line">    sudo chmod a+r /usr/local/cuda-12.1/include/cudnn*</span><br><span class="line">    sudo chmod a+r /usr/local/cuda-12.1/lib64/libcudnn*</span><br><span class="line">    </span><br><span class="line">删除</span><br><span class="line">    sudo rm -f /usr/local/cuda-12.1/include/cudnn*.h</span><br><span class="line">    sudo rm -f /usr/local/cuda-12.1/lib64/libcudnn* </span><br></pre></td></tr></table></figure></li>
+<li>验证<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">方式1：</span><br><span class="line">    cat /usr/local/cuda/include/cudnn_version.h | grep CUDNN_MAJOR -A 2</span><br><span class="line">方式2：</span><br><span class="line">    cudnn_samples_v8/mnistCUDNN</span><br><span class="line">        make clean &amp; make</span><br><span class="line">        ./mnistCUDNN</span><br><span class="line">    报错：nvcc fatal   : Unsupported gpu architecture &#x27;compute_35&#x27;</span><br><span class="line">    修改mnistCUDNN/Makefile:</span><br><span class="line">        ifeq ($(GENCODE_FLAGS),)</span><br><span class="line">        # Generate SASS code for each SM architecture listed in $(SMS)</span><br><span class="line">        #$(foreach sm,$(SMS),$(eval GENCODE_FLAGS += -gencode arch=compute_$(sm),code=sm_$(sm)))</span><br><span class="line">        $(foreach sm,$(filter-out 35,$(SMS)),$(eval GENCODE_FLAGS += -gencode arch=compute_$(sm),code=sm_$(sm)))</span><br><span class="line">    输出Test passed!</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="四、CUDA与CUDNN的关系"><a href="#四、CUDA与CUDNN的关系" class="headerlink" title="四、CUDA与CUDNN的关系"></a>四、CUDA与CUDNN的关系</h3><p>CUDA看作是一个工作台，上面配有很多工具，如锤子、螺丝刀等。cuDNN是基于CUDA的深度学习GPU加速库，有了它才能在GPU上完成深度学习的计算。它就相当于工作的工具，比如它就是个扳手。但是CUDA这个工作台买来的时候，并没有送扳手。想要在CUDA上运行深度神经网络，就要安装cuDNN，就像你想要拧个螺帽就要把扳手买回来。这样才能使GPU进行深度神经网络的工作，工作速度相较CPU快很多。</p>
+<h3 id="五、Pytorch"><a href="#五、Pytorch" class="headerlink" title="五、Pytorch"></a>五、Pytorch</h3><p>基于conda进行python环境管理，创建环境ai_env，后续相关命令基于该环境进行。</p>
+<ol>
+<li>安装<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">下载地址获取：</span><br><span class="line">    https://pytorch.org/get-started/locally/选择CUDA12.1对应命令</span><br><span class="line">安装：</span><br><span class="line">    GPU： conda install pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvidia</span><br><span class="line">    CPU： conda install pytorch torchvision torchaudio cpuonly -c pytorch</span><br></pre></td></tr></table></figure></li>
+<li>验证<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">ai_env环境下，执行如下代码：</span><br><span class="line">import torch</span><br><span class="line">print(&#x27;CUDA版本:&#x27;,torch.version.cuda)</span><br><span class="line">print(&#x27;Pytorch版本:&#x27;,torch.__version__)</span><br><span class="line">print(&#x27;显卡是否可用:&#x27;,&#x27;可用&#x27; if(torch.cuda.is_available()) else &#x27;不可用&#x27;)</span><br><span class="line">print(&#x27;显卡数量:&#x27;,torch.cuda.device_count())</span><br><span class="line">print(&#x27;是否支持BF16数字格式:&#x27;,&#x27;支持&#x27; if (torch.cuda.is_bf16_supported()) else &#x27;不支持&#x27;)</span><br><span class="line">print(&#x27;当前显卡型号:&#x27;,torch.cuda.get_device_name())</span><br><span class="line">print(&#x27;当前显卡的CUDA算力:&#x27;,torch.cuda.get_device_capability())</span><br><span class="line">print(&#x27;当前显卡的总显存:&#x27;,torch.cuda.get_device_properties(0).total_memory/1024/1024/1024,&#x27;GB&#x27;)</span><br><span class="line">print(&#x27;是否支持TensorCore:&#x27;,&#x27;支持&#x27; if (torch.cuda.get_device_properties(0).major &gt;= 7) else &#x27;不支持&#x27;)</span><br><span class="line">print(&#x27;当前显卡的显存使用率:&#x27;,torch.cuda.memory_allocated(0)/torch.cuda.get_device_properties(0).total_memory*100,&#x27;%&#x27;)</span><br><span class="line"></span><br><span class="line">输出：</span><br><span class="line">CUDA版本: 12.1</span><br><span class="line">Pytorch版本: 2.2.0</span><br><span class="line">显卡是否可用: 可用</span><br><span class="line">显卡数量: 1</span><br><span class="line">是否支持BF16数字格式: 支持</span><br><span class="line">当前显卡型号: NVIDIA GeForce RTX 4060 Laptop GPU</span><br><span class="line">当前显卡的CUDA算力: (8, 9)</span><br><span class="line">当前显卡的总显存: 7.7540283203125 GB</span><br><span class="line">是否支持TensorCore: 支持</span><br><span class="line">当前显卡的显存使用率: 0.0 %</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="五、显卡驱动-CUDA-cuDNN-Pytorch版本选择"><a href="#五、显卡驱动-CUDA-cuDNN-Pytorch版本选择" class="headerlink" title="五、显卡驱动 &amp; CUDA &amp; cuDNN &amp; Pytorch版本选择"></a>五、显卡驱动 &amp; CUDA &amp; cuDNN &amp; Pytorch版本选择</h3><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/633473214">参考地址：https://zhuanlan.zhihu.com/p/633473214</a></p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2024/02/21/ai/Langchain-chatchat/" rel="prev" title="ai开发环境搭建">
+                  <i class="fa fa-angle-left"></i> ai开发环境搭建
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2021 – 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">程序员老冯</span>
+  </div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>
