@@ -59,6 +59,9 @@ tags:
   - hexo
   - markdown
 
+# 机器学习
+- NER
+
 # 面试
 
 - interview
