@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha256-XOqroi11tY4EFQMR9ZYwZWKj5ZXiftSx36RRuC3anlA=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"xyzy.pro","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.20.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="java类库 内置类库 java.基础 java.lang java.util java.io java.nio java.net java.beans java.text java.applet java.awt   javax.扩展 javax.swing javax.net     外部类库 日志 slf4j   JSON解析库 Jackson   单元测试库 JUnit Mockito">
+<meta property="og:type" content="article">
+<meta property="og:title" content="java大纲">
+<meta property="og:url" content="http://xyzy.pro/2021/01/02/tech/java/java-outline/index.html">
+<meta property="og:site_name" content="信仰之跃">
+<meta property="og:description" content="java类库 内置类库 java.基础 java.lang java.util java.io java.nio java.net java.beans java.text java.applet java.awt   javax.扩展 javax.swing javax.net     外部类库 日志 slf4j   JSON解析库 Jackson   单元测试库 JUnit Mockito">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://xyzy.pro/images/java-outline/hexo-java.jpg">
+<meta property="article:published_time" content="2021-01-02T12:13:30.000Z">
+<meta property="article:modified_time" content="2024-09-23T07:25:56.388Z">
+<meta property="article:author" content="程序员老冯">
+<meta property="article:tag" content="tech">
+<meta property="article:tag" content="java">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://xyzy.pro/images/java-outline/hexo-java.jpg">
+
+
+<link rel="canonical" href="http://xyzy.pro/2021/01/02/tech/java/java-outline/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://xyzy.pro/2021/01/02/tech/java/java-outline/","path":"2021/01/02/tech/java/java-outline/","title":"java大纲"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>java大纲 | 信仰之跃</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">信仰之跃</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">时间的朋友</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section">首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section">标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section">分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section">归档</a></li><li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section">站点地图</a></li><li class="menu-item menu-item-commonweal"><a href="/404/" rel="section">公益 404</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#PDF%E5%A4%84%E7%90%86%E5%BA%93-iText-Apache-FOP"><span class="nav-number">1.</span> <span class="nav-text">PDF处理库- iText- Apache FOP</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">程序员老冯</p>
+  <div class="site-description" itemprop="description">岁月似乎终于让他找到了自己的形状，长成了一种稳定自在的样子</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">10</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/thunderingswolf" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;thunderingswolf" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://xyzy.pro/2021/01/02/tech/java/java-outline/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="程序员老冯">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="信仰之跃">
+      <meta itemprop="description" content="岁月似乎终于让他找到了自己的形状，长成了一种稳定自在的样子">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="java大纲 | 信仰之跃">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          java大纲
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-01-02 20:13:30" itemprop="dateCreated datePublished" datetime="2021-01-02T20:13:30+08:00">2021-01-02</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2024-09-23 15:25:56" itemprop="dateModified" datetime="2024-09-23T15:25:56+08:00">2024-09-23</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/tech/" itemprop="url" rel="index"><span itemprop="name">tech</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/tech/java/" itemprop="url" rel="index"><span itemprop="name">java</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p><img src="/../../images/java-outline/hexo-java.jpg" alt="hexo-java"></p>
+<ul>
+<li>java类库<ul>
+<li>内置类库<ul>
+<li>java.基础<ul>
+<li>java.lang</li>
+<li>java.util</li>
+<li>java.io</li>
+<li>java.nio</li>
+<li>java.net</li>
+<li>java.beans</li>
+<li>java.text</li>
+<li>java.applet</li>
+<li>java.awt</li>
+</ul>
+</li>
+<li>javax.扩展<ul>
+<li>javax.swing</li>
+<li>javax.net</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>外部类库<ul>
+<li>日志<ul>
+<li>slf4j</li>
+</ul>
+</li>
+<li>JSON解析库<ul>
+<li>Jackson</li>
+</ul>
+</li>
+<li>单元测试库<ul>
+<li>JUnit</li>
+<li>Mockito</li>
+<li>JUnit Runner</li>
+<li>junit.framework</li>
+</ul>
+</li>
+<li>通用类库<ul>
+<li>Apache Commons</li>
+<li>Google Guava</li>
+</ul>
+</li>
+<li>Http 库<ul>
+<li>Apache HttpClient</li>
+<li>Apache HttpCore</li>
+</ul>
+</li>
+<li>XML解析库<ul>
+<li>Xerces</li>
+<li>JAXB</li>
+<li>Dom4j</li>
+<li>JAXP</li>
+<li>Xstream</li>
+</ul>
+</li>
+<li>Excel读写库<ul>
+<li>Apache POI API</li>
+</ul>
+</li>
+<li>字节码库<ul>
+<li>javassist</li>
+<li>Cglib Nodep</li>
+</ul>
+</li>
+<li>数据库连接池库<ul>
+<li>DBCP</li>
+<li>C3p0</li>
+<li>Commons Pool</li>
+</ul>
+</li>
+<li>消息传递库<ul>
+<li>Tibco RV</li>
+</ul>
+</li>
+<li><h2 id="PDF处理库-iText-Apache-FOP"><a href="#PDF处理库-iText-Apache-FOP" class="headerlink" title="PDF处理库- iText- Apache FOP"></a>PDF处理库<br>- iText<br>- Apache FOP</h2></li>
+<li>日期和时间库<ul>
+<li>JodaTime JAVA8后可以放弃</li>
+</ul>
+</li>
+<li>集合类库<ul>
+<li>Apache Commons Collections</li>
+<li>Trove</li>
+<li>Google Collections</li>
+<li>Goldman Sachs collections</li>
+<li>FastUtil</li>
+</ul>
+</li>
+<li>邮件API<ul>
+<li>Apache Commons Email</li>
+</ul>
+</li>
+<li>HTML解析库<ul>
+<li>JSoup</li>
+</ul>
+</li>
+<li>加密库<ul>
+<li>Commons Codec</li>
+</ul>
+</li>
+<li>嵌入式SQL数据库库<ul>
+<li>H2</li>
+<li>Apache Derby</li>
+<li>HSQL</li>
+</ul>
+</li>
+<li>JDBC故障诊断库<ul>
+<li>P6spy</li>
+</ul>
+</li>
+<li>序列化库<ul>
+<li>Google Protocol Buffer</li>
+</ul>
+</li>
+<li>网络库<ul>
+<li>Netty</li>
+<li>Apache MINA</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>类库家族<ul>
+<li>org.apache<ul>
+<li>hadoop</li>
+<li>commons<ul>
+<li>.lang3</li>
+<li>lang</li>
+</ul>
+</li>
+<li>shiro</li>
+<li>http<ul>
+<li>.client</li>
+<li>.impl</li>
+</ul>
+</li>
+<li>lucecn</li>
+<li>ibatis</li>
+<li>maven</li>
+</ul>
+</li>
+<li>org.springframework</li>
+<li>com.google<ul>
+<li>inject</li>
+<li>Guice是Google开发的一个轻量级，基于Java5（主要运用泛型与注释特性）的依赖注入框架(IOC)。Guice非常小而且快。Guice是类型安全的，它能够对构造函数，属性，方法（包含任意个参数的任意方法，而不仅仅是setter方法）进行注入。</li>
+</ul>
+</li>
+<li>org.junit<ul>
+<li>Runner</li>
+</ul>
+</li>
+<li>org.eclipse<ul>
+<li>jetty<ul>
+<li>Jetty是一个纯粹的基于Java的网页服务器和Java Servlet容器。尽管网页服务器通常用来为人们呈现文档，但是Jetty通常在较大的软件框架中用于计算机与计算机之间的通信。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>com.fasterxml<ul>
+<li>jackson</li>
+</ul>
+</li>
+<li>org.elasticsearch</li>
+<li>org.mockito</li>
+<li>io.netty<ul>
+<li>channel</li>
+<li>handler</li>
+<li>Netty 是一个基于NIO的客户、服务器端编程框架，使用Netty 可以确保你快速和简单的开发出一个网络应用，例如实现了某种协议的客户、服务端应用。Netty相当于简化和流线化了网络应用的编程开发过程，例如：基于TCP和UDP的socket服务开发。</li>
+</ul>
+</li>
+<li>com.amazonaws<ul>
+<li>services</li>
+</ul>
+</li>
+<li>org.jboss<ul>
+<li>netty</li>
+</ul>
+</li>
+<li>com.netflix</li>
+<li>org.harmcrest</li>
+<li>org.codehaus</li>
+<li>com.alibaba<ul>
+<li>otter<ul>
+<li>otter是一个基于数据库增量日志解析，准实时同步到本机房或异地机房的mysql&#x2F;oracle数据库. 一个分布式数据库同步系统。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>org.slf4j</li>
+<li>com.intellij</li>
+<li>org.hibernate</li>
+<li>org.bouncycastle</li>
+<li>io.undertow</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>关键技术<ul>
+<li>Java 基础<ul>
+<li>数据类型</li>
+<li>String</li>
+<li>运算</li>
+<li>关键字</li>
+<li>Object</li>
+<li>继承</li>
+<li>反射</li>
+<li>异常</li>
+<li>泛型</li>
+<li>注解</li>
+<li>特性</li>
+</ul>
+</li>
+<li>Java 容器（集合）<ul>
+<li>Map &amp; Collection</li>
+<li>设计模式</li>
+<li>源码</li>
+</ul>
+</li>
+<li>Java 并发<ul>
+<li>线程…</li>
+</ul>
+</li>
+<li>Java I&#x2F;O<ul>
+<li>磁盘操作</li>
+<li>字节操作</li>
+<li>字符操作</li>
+<li>对象操作</li>
+<li>网络操作</li>
+<li>NIO</li>
+</ul>
+</li>
+<li>java虚拟机<ul>
+<li>特性<ul>
+<li>优势<ul>
+<li>平台无关、安全、可网络移动</li>
+</ul>
+</li>
+<li>缺点<ul>
+<li>性能</li>
+<li>内存管理，不明确</li>
+<li>线程调度，不明确</li>
+<li>反编译容易<ul>
+<li>引用、描述信息多<ul>
+<li>混淆器</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>类加载器<ul>
+<li>字节码文件结构</li>
+<li>双亲委派机制</li>
+<li>类的生命周期<ul>
+<li>加载，验证，准备，解析，初始化</li>
+<li>使用、卸载</li>
+</ul>
+</li>
+<li>类初始化时机<ul>
+<li>主动引用</li>
+<li>被动引用</li>
+</ul>
+</li>
+<li>类加载器分类<ul>
+<li>启动类加载器</li>
+<li>扩展类加载器</li>
+<li>应用程序类加载器</li>
+<li>自定义类加载器实现</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>运行时数据区<ul>
+<li>程序计数器</li>
+<li>虚拟机栈</li>
+<li>本地方法栈</li>
+<li>方法区（共享）<ul>
+<li>运行时常量池</li>
+</ul>
+</li>
+<li>堆（共享）<ul>
+<li>垃圾回收<ul>
+<li>判断生死<ul>
+<li>引用计数算法</li>
+<li>可达性分析算法</li>
+<li>方法区的回收</li>
+<li>finalize()</li>
+</ul>
+</li>
+<li>引用类型<ul>
+<li>强软弱虚</li>
+</ul>
+</li>
+<li>垃圾收集算法<ul>
+<li>标记-清除算法</li>
+<li>复制算法</li>
+<li>标记-整理算法</li>
+<li>分代收集算法</li>
+</ul>
+</li>
+<li>垃圾收集器<ul>
+<li>Serial收集器</li>
+<li>ParNew收集器</li>
+<li>Parallel Scavenge收集器</li>
+<li>Serial Old收集器</li>
+<li>Parallel Old收集器</li>
+<li>CMS收集器</li>
+<li>G1收集器</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>内存分配及回收策略<ul>
+<li>Minor GC 和 Full GC</li>
+<li>内存分配策略</li>
+<li>Full GC 的触发条件</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>直接内存<ul>
+<li>NIO DirectByteBuffer</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>执行引擎</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>编程规范<ul>
+<li>Alibaba</li>
+<li>Google</li>
+</ul>
+</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/tech/" rel="tag"># tech</a>
+              <a href="/tags/java/" rel="tag"># java</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/01/02/live/outline/" rel="prev" title="写作大纲">
+                  <i class="fa fa-angle-left"></i> 写作大纲
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2021/01/02/tech/points/spring/spring-outline/" rel="next" title="spring大纲">
+                  spring大纲 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2021 – 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">程序员老冯</span>
+  </div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>
