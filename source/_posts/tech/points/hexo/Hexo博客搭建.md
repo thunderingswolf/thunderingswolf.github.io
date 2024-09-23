@@ -2,9 +2,14 @@
 layout: 'n'
 title: Hexo博客搭建
 date: 2021-01-01 22:09:43
+categories:
+- tech
+- points
+- hexo
 tags: 
-- Hexo
-- Next
+- tech
+- points
+- hexo
 ---
 ## hexo建站
 

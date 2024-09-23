@@ -2,10 +2,11 @@
 title: java大纲
 date: 2021-01-02 20:13:30
 categories:
-- 技术
-tags:
+- tech
 - java
-- outline
+tags: 
+- tech
+- java
 ---
 
 ![hexo-java](../../images/java-outline/hexo-java.jpg)

@@ -1,7 +1,14 @@
 ---
 title: linux/ubuntu安装和查看已安装软件包
 date: 2023-11-02 15:37:14
-tags:
+categories:
+- tech
+- os
+- linux
+tags: 
+- tech
+- os
+- linux
 ---
 
 终端通过命令行方式进行的软件包安装、卸载和删除的方法。

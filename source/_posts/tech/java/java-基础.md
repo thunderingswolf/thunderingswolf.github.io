@@ -2,10 +2,11 @@
 title: java基础
 date: 2021-01-02 21:42:30
 categories:
-- 技术
-tags:
+- tech
 - java
-- outline
+tags: 
+- tech
+- java
 ---
 
 # java基础

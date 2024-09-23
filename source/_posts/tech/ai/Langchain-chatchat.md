@@ -1,7 +1,13 @@
 ---
 title: ai开发环境搭建
 date: 2024-02-21 14:28:05
-tags:
+categories:
+- tech
+- ai
+tags: 
+- tech
+- ai
+- langchain
 ---
 
 ### 一、待办

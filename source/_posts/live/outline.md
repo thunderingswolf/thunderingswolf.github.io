@@ -1,10 +1,10 @@
 ---
 title: 写作大纲
-date: {{ date }}
-updated: {{ date }}
+date: 2021-01-02 10:26:30
 categories:
-- outline
+- live
 tags:
+- live
 - outline
 ---
 
