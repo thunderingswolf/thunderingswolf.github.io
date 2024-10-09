@@ -1,5 +1,5 @@
 ---
-title: linux/ubuntu安装和查看已安装软件包
+title: Ubuntu安装和查看已安装软件包
 date: 2023-11-02 15:37:14
 categories:
 - tech

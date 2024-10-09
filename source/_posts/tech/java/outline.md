@@ -1,15 +1,15 @@
 ---
-title: java大纲
-date: 2021-01-02 20:13:30
+title: Java大纲
+date: 2024-10-09 12:13:30
 categories:
 - tech
 - java
 tags: 
 - tech
 - java
+- outline
 ---
 
-![hexo-java](../../images/java-outline/hexo-java.jpg)
 
 - java类库
   - 内置类库
@@ -222,3 +222,5 @@ tags:
 - 编程规范
   - Alibaba
   - Google
+
+![hexo-java](/images/tech/java/hexo-java.jpg)

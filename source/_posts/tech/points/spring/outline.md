@@ -1,5 +1,5 @@
 ---
-title: spring大纲
+title: Spring大纲
 date: 2021-01-02 21:21:30
 categories:
 - tech
@@ -9,9 +9,10 @@ tags:
 - tech
 - points
 - spring
+- outline
 ---
 
-![hexo-spring](../../images/spring-outline/hexo-spring.jpg)
+
 
 spring系列
 
@@ -23,3 +24,5 @@ spring系列
 - security
 - session
 - web flow
+
+![hexo-spring](/images/tech/spring/hexo-spring.jpg)
