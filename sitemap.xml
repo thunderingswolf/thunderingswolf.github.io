@@ -200,14 +200,14 @@
   </url>
   
   <url>
-    <loc>http://xyzy.pro/tags/hexo/</loc>
+    <loc>http://xyzy.pro/tags/spring/</loc>
     <lastmod>2024-12-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://xyzy.pro/tags/spring/</loc>
+    <loc>http://xyzy.pro/tags/hexo/</loc>
     <lastmod>2024-12-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -237,13 +237,6 @@
   </url>
   
   <url>
-    <loc>http://xyzy.pro/categories/tech/os/</loc>
-    <lastmod>2024-12-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://xyzy.pro/categories/live/life/</loc>
     <lastmod>2024-12-13</lastmod>
     <changefreq>weekly</changefreq>
@@ -258,7 +251,7 @@
   </url>
   
   <url>
-    <loc>http://xyzy.pro/categories/tech/os/linux/</loc>
+    <loc>http://xyzy.pro/categories/tech/os/</loc>
     <lastmod>2024-12-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -272,7 +265,7 @@
   </url>
   
   <url>
-    <loc>http://xyzy.pro/categories/tech/points/hexo/</loc>
+    <loc>http://xyzy.pro/categories/tech/os/linux/</loc>
     <lastmod>2024-12-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -280,6 +273,13 @@
   
   <url>
     <loc>http://xyzy.pro/categories/tech/points/spring/</loc>
+    <lastmod>2024-12-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://xyzy.pro/categories/tech/points/hexo/</loc>
     <lastmod>2024-12-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
