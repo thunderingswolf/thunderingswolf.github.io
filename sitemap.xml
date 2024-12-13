@@ -130,7 +130,7 @@
 
   <url>
     <loc>http://xyzy.pro/</loc>
-    <lastmod>2024-10-09</lastmod>
+    <lastmod>2024-12-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -138,77 +138,77 @@
   
   <url>
     <loc>http://xyzy.pro/tags/outline/</loc>
-    <lastmod>2024-10-09</lastmod>
+    <lastmod>2024-12-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://xyzy.pro/tags/live/</loc>
-    <lastmod>2024-10-09</lastmod>
+    <lastmod>2024-12-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://xyzy.pro/tags/tech/</loc>
-    <lastmod>2024-10-09</lastmod>
+    <lastmod>2024-12-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://xyzy.pro/tags/life/</loc>
-    <lastmod>2024-10-09</lastmod>
+    <lastmod>2024-12-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://xyzy.pro/tags/ai/</loc>
-    <lastmod>2024-10-09</lastmod>
+    <lastmod>2024-12-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://xyzy.pro/tags/java/</loc>
-    <lastmod>2024-10-09</lastmod>
+    <lastmod>2024-12-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://xyzy.pro/tags/os/</loc>
-    <lastmod>2024-10-09</lastmod>
+    <lastmod>2024-12-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://xyzy.pro/tags/linux/</loc>
-    <lastmod>2024-10-09</lastmod>
+    <lastmod>2024-12-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://xyzy.pro/tags/points/</loc>
-    <lastmod>2024-10-09</lastmod>
+    <lastmod>2024-12-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://xyzy.pro/tags/hexo/</loc>
-    <lastmod>2024-10-09</lastmod>
+    <lastmod>2024-12-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://xyzy.pro/tags/spring/</loc>
-    <lastmod>2024-10-09</lastmod>
+    <lastmod>2024-12-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -217,70 +217,70 @@
   
   <url>
     <loc>http://xyzy.pro/categories/live/</loc>
-    <lastmod>2024-10-09</lastmod>
+    <lastmod>2024-12-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://xyzy.pro/categories/tech/</loc>
-    <lastmod>2024-10-09</lastmod>
+    <lastmod>2024-12-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://xyzy.pro/categories/tech/java/</loc>
-    <lastmod>2024-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://xyzy.pro/categories/live/life/</loc>
-    <lastmod>2024-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://xyzy.pro/categories/tech/ai/</loc>
-    <lastmod>2024-10-09</lastmod>
+    <lastmod>2024-12-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://xyzy.pro/categories/tech/os/</loc>
-    <lastmod>2024-10-09</lastmod>
+    <lastmod>2024-12-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://xyzy.pro/categories/tech/points/</loc>
-    <lastmod>2024-10-09</lastmod>
+    <loc>http://xyzy.pro/categories/live/life/</loc>
+    <lastmod>2024-12-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://xyzy.pro/categories/tech/ai/</loc>
+    <lastmod>2024-12-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://xyzy.pro/categories/tech/os/linux/</loc>
-    <lastmod>2024-10-09</lastmod>
+    <lastmod>2024-12-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://xyzy.pro/categories/tech/points/</loc>
+    <lastmod>2024-12-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://xyzy.pro/categories/tech/points/hexo/</loc>
-    <lastmod>2024-10-09</lastmod>
+    <lastmod>2024-12-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://xyzy.pro/categories/tech/points/spring/</loc>
-    <lastmod>2024-10-09</lastmod>
+    <lastmod>2024-12-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>

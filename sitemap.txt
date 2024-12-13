@@ -27,10 +27,10 @@ http://xyzy.pro/tags/spring/
 http://xyzy.pro/categories/live/
 http://xyzy.pro/categories/tech/
 http://xyzy.pro/categories/tech/java/
+http://xyzy.pro/categories/tech/os/
 http://xyzy.pro/categories/live/life/
 http://xyzy.pro/categories/tech/ai/
-http://xyzy.pro/categories/tech/os/
-http://xyzy.pro/categories/tech/points/
 http://xyzy.pro/categories/tech/os/linux/
+http://xyzy.pro/categories/tech/points/
 http://xyzy.pro/categories/tech/points/hexo/
 http://xyzy.pro/categories/tech/points/spring/
