@@ -46,6 +46,26 @@ $ hexo init [folder]
 # new：新建一篇文章
 $ hexo new [layout] <title>
 
+# generate：生成静态文件
+$ hexo generate
+
+# publish：发表草稿
+$ hexo publish [layout] <filename>
+
+# server：启动服务器
+$ hexo server
+默认情况下，访问网址为： http://localhost:4000/
+
+# deploy：部署网站
+$ hexo deploy
+
+# render：渲染文件
+$ hexo render <file1> [file2] ...
+
+# migrate：从其他博客系统 迁移内容
+$ hexo migrate <type>
+
+# clean：
 ```
 
 
