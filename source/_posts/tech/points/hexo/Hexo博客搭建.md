@@ -30,6 +30,9 @@ Hexo 是一个快速、简洁且高效的博客框架。 Hexo 使用 [Markdown]
 
 ```bash
 npm install -g hexo-cli
+
+# 验证
+hexo --version
 ```
 
 
