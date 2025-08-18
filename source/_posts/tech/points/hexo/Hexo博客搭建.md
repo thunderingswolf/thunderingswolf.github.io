@@ -32,7 +32,20 @@ Hexo 是一个快速、简洁且高效的博客框架。 Hexo 使用 [Markdown]
 npm install -g hexo-cli
 
 # 验证
-hexo --version
+$ hexo --version
+```
+
+
+
+## 指令
+
+```bash
+# init： 新建一个网站
+$ hexo init [folder]
+
+# new：新建一篇文章
+$ hexo new [layout] <title>
+
 ```
 
 
