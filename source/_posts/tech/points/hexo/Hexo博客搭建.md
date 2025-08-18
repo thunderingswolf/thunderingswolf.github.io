@@ -91,11 +91,11 @@ Next主题：<http://theme-next.iissnan.com/>
 
 
 
-## 使用技巧
+# 开发技巧
 
-### 源码和部署程序管理
+## Github源码和部署程序管理
 
-1. 创建仓库，[https://thunderingswolf.github.io](https://thunderingswolf.github.io)
+1. github创建仓库，[https://thunderingswolf.github.io](https://thunderingswolf.github.io)
 
 2. 创建两个分支：master 与 hexo
 
@@ -105,9 +105,9 @@ Next主题：<http://theme-next.iissnan.com/>
 
 >>总结：仓库就有两个分支，一个hexo分支用来存放网站的原始文件，一个master分支用来存放生成的静态网页
 
-### 多台电脑协作流程
+## 多台电脑协作流程
 
-1. 安装hexo基础环境(node.js\git\hexo)，参考官网: https://hexo.io/zh-cn/docs/
+1. 每台PC安装hexo基础环境(node.js\git\hexo)
 2. 使用`git clone git@github.com:thunderingswolf/thunderingswolf.github.io.git`拷贝仓库
 3. 【可选】下载最新主题：`git clone https://github.com/iissnan/hexo-theme-next themes/next` ,如无需经常更新可一并存放至 hexo分支中
 4. 本地对博客进行修改（添加新博文、修改样式等等）
