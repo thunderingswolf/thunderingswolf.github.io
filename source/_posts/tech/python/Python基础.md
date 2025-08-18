@@ -13,7 +13,7 @@ tags:
 
 ## 环境
 
-
+采用conda管理python环境
 
 ## 语法
 
