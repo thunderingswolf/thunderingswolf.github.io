@@ -15,8 +15,6 @@ tags:
 
 Hexo官网：<https://hexo.io/zh-cn/docs/>
 
-Next主题官网：<http://theme-next.iissnan.com/>
-
 Hexo 是一个快速、简洁且高效的博客框架。 Hexo 使用 [Markdown](http://daringfireball.net/projects/markdown/)（或其他标记语言）解析文章。
 
 ## 安装
@@ -85,15 +83,13 @@ $ hexo config [key] [value]
 
 _config.yml文件：https://hexo.io/zh-cn/docs/configuration
 
+## 主题
+
+Hexo主题：https://hexo.io/zh-cn/docs/themes
+
+Next主题：<http://theme-next.iissnan.com/>
 
 
-## hexo建站
-
-参考hexo官网：<https://hexo.io/zh-cn/docs/>
-
-## next主题
-
-参考next官网：<http://theme-next.iissnan.com/>
 
 ## 使用技巧
 
