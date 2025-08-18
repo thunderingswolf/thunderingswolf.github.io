@@ -79,7 +79,9 @@ $ hexo config [key] [value]
 
 ```
 
+## 配置
 
+_config.yml文件：https://hexo.io/zh-cn/docs/configuration
 
 
 
