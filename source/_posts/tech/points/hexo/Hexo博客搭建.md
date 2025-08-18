@@ -91,7 +91,7 @@ Next主题：<http://theme-next.iissnan.com/>
 
 
 
-# 开发技巧
+# 文档开发技巧
 
 ## Github源码和部署程序管理
 
@@ -107,16 +107,20 @@ Next主题：<http://theme-next.iissnan.com/>
 
 ## 多台电脑协作流程
 
-1. 每台PC安装hexo基础环境(node.js\git\hexo)
-2. 使用`git clone git@github.com:thunderingswolf/thunderingswolf.github.io.git`拷贝仓库
-3. 【可选】下载最新主题：`git clone https://github.com/iissnan/hexo-theme-next themes/next` ,如无需经常更新可一并存放至 hexo分支中
-4. 保持在hexo分支，本地对博客进行修改（添加新博文、修改样式等等）
-5. 依次执行git add .、git commit -m "..."、git push origin hexo指令将改动推送到GitHub（此时当前分支应为hexo）
-6. 执行hexo g -d发布网站到master分支
+### 环境安装及仓库下载
+
+1. 每台PC安装hexo基础环境：node.js，git，hexo；
+2. 使用`git clone git@github.com:thunderingswolf/thunderingswolf.github.io.git`拷贝仓库；
+3. 更新主题：`git clone https://github.com/iissnan/hexo-theme-next themes/next` ,如无需经常更新可一并存放至 hexo分支中；
+
+### 编写文档及提交
+
+1. 保持在hexo分支，本地对博客进行添加、修改；
+2. 依次执行git add .、git commit -m "..."、git push origin hexo指令将改动推送到GitHub；或通过可视化开发工具执行；
+
+### 部署网站
+
+1. 执行hexo g -d发布网站到master分支；
+2. 域名解析指向已完成；
 
 
-
-### 附录：ssh配置
-
-1. github ssh免密配置：<https://www.jianshu.com/p/9317a927e844>
-2. 多远程仓库ssh配置：<https://www.jianshu.com/p/ddd3122cb351>
