@@ -116,7 +116,8 @@ Next主题：<http://theme-next.iissnan.com/>
 ### 编写文档及提交
 
 1. 保持在hexo分支，本地对博客进行添加、修改；
-2. 依次执行git add .、git commit -m "..."、git push origin hexo指令将改动推送到GitHub；或通过可视化开发工具执行；
+2. 本地启动调试：hexo clean /hexo server
+3. 依次执行git add .、git commit -m "..."、git push origin hexo指令将改动推送到GitHub；或通过可视化开发工具执行；
 
 ### 部署网站
 
