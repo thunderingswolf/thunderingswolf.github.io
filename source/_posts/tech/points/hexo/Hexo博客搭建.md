@@ -11,6 +11,29 @@ tags:
 - points
 - hexo
 ---
+# 概述
+
+Hexo官网：<https://hexo.io/zh-cn/docs/>
+
+Next主题官网：<http://theme-next.iissnan.com/>
+
+Hexo 是一个快速、简洁且高效的博客框架。 Hexo 使用 [Markdown](http://daringfireball.net/projects/markdown/)（或其他标记语言）解析文章。
+
+## 安装
+
+### 前置需求
+
+1. Node.js：注意版本匹配
+2. Git
+
+### 安装Hexo
+
+```bash
+npm install -g hexo-cli
+```
+
+
+
 ## hexo建站
 
 参考hexo官网：<https://hexo.io/zh-cn/docs/>
