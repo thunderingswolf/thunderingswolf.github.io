@@ -65,8 +65,21 @@ $ hexo render <file1> [file2] ...
 # migrate：从其他博客系统 迁移内容
 $ hexo migrate <type>
 
-# clean：
+# clean：清除缓存文件 (db.json) 和已生成的静态文件 (public)
+$ hexo clean
+
+# list：列出所有路由
+$ hexo list <type>
+
+# version：显示版本信息
+$ hexo version
+
+# config：列出网站的配置（_config.yml）
+$ hexo config [key] [value]
+
 ```
+
+
 
 
 
