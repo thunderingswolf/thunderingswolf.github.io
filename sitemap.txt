@@ -1,3 +1,4 @@
+http://xyzy.pro/2025/08/17/tech/python/Python%E5%9F%BA%E7%A1%80/
 http://xyzy.pro/tags/index.html
 http://xyzy.pro/2024/04/24/outline/
 http://xyzy.pro/2021/01/02/live/outline/
@@ -24,6 +25,7 @@ http://xyzy.pro/tags/linux/
 http://xyzy.pro/tags/points/
 http://xyzy.pro/tags/spring/
 http://xyzy.pro/tags/hexo/
+http://xyzy.pro/tags/python/
 http://xyzy.pro/categories/live/
 http://xyzy.pro/categories/tech/
 http://xyzy.pro/categories/tech/java/
@@ -34,3 +36,4 @@ http://xyzy.pro/categories/tech/points/
 http://xyzy.pro/categories/tech/os/linux/
 http://xyzy.pro/categories/tech/points/spring/
 http://xyzy.pro/categories/tech/points/hexo/
+http://xyzy.pro/categories/tech/python/
