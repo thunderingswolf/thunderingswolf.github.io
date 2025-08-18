@@ -110,7 +110,7 @@ Next主题：<http://theme-next.iissnan.com/>
 1. 每台PC安装hexo基础环境(node.js\git\hexo)
 2. 使用`git clone git@github.com:thunderingswolf/thunderingswolf.github.io.git`拷贝仓库
 3. 【可选】下载最新主题：`git clone https://github.com/iissnan/hexo-theme-next themes/next` ,如无需经常更新可一并存放至 hexo分支中
-4. 本地对博客进行修改（添加新博文、修改样式等等）
+4. 保持在hexo分支，本地对博客进行修改（添加新博文、修改样式等等）
 5. 依次执行git add .、git commit -m "..."、git push origin hexo指令将改动推送到GitHub（此时当前分支应为hexo）
 6. 执行hexo g -d发布网站到master分支
 
