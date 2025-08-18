@@ -21,6 +21,8 @@ Hexo 是一个快速、简洁且高效的博客框架。 Hexo 使用 [Markdown]
 
 ## 安装
 
+<https://hexo.io/zh-cn/docs/>
+
 ### 前置需求
 
 1. Node.js：注意版本匹配
@@ -35,9 +37,9 @@ npm install -g hexo-cli
 $ hexo --version
 ```
 
-
-
 ## 指令
+
+Hexo指令：https://hexo.io/zh-cn/docs/commands
 
 ```bash
 # init： 新建一个网站
