@@ -36,6 +36,11 @@ tags:
 1. 安装最新版本deb
 2. 安装ZeroOmega，导入配置文件
    1. 先通过系统代理配置
+   2. OmegaOptions***.bak
+
+3. 登录google同步书签
+
+
 
 
 
