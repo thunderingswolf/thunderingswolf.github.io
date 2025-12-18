@@ -49,9 +49,16 @@ tags:
 1. 安装git工具
 2. 配置账户
    1. github
-   2. gitlab（需先配置证书）
+   2. gitlab（需先配置dev证书）
 
 ## Obsidian工具
+
+1. git clone仓库（3个）
+2. 配置插件
+   1. 看板
+   2. git：配置周期
+
+
 
 
 
