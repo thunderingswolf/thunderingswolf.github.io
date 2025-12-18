@@ -31,7 +31,10 @@ tags:
 
 
 
-Chrome浏览器
+# Chrome浏览器
+
+1. 安装最新版本
+2. 安装ZeroOmega，导入配置文件
 
 
 
