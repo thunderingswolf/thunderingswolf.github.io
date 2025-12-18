@@ -72,6 +72,10 @@ tags:
 
 ## Virtulbox
 
+1. win10
+   1. 配置outlook
+   2. 配置邮箱证书
+
 ### JetBrain
 
 1. idea
