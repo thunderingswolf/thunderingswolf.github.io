@@ -22,7 +22,9 @@ tags:
 1. 有线网卡配置静态IP（192.168.0.110）
 2. 无线网卡配置静态IP（192.168.0.110）
 
+## 文件夹规划
 
+1. 参考模型
 
 ## Docker环境
 
@@ -73,8 +75,9 @@ tags:
 ## Virtulbox
 
 1. win10
-   1. 配置outlook
-   2. 配置邮箱证书
+   1. 配置outlook含证书账号LDAP
+   2. TopVPN
+   3. mindline
 
 ### JetBrain
 
@@ -83,7 +86,19 @@ tags:
 3. webstorm
 4. datagrip
 
+## TopVPN
 
+1. 安装deb
+2. 补充so文件
+3. share/applications创建快捷方式
+
+## Typora
+
+## Xmind
+
+## Insomnia
+
+### FileZilla
 
 
 
