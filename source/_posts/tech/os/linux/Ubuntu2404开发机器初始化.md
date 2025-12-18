@@ -33,8 +33,6 @@ tags:
    1. 5.16.1版本
    2. v2ray.json配置
 
-
-
 ## Chrome浏览器
 
 1. 安装最新版本deb
@@ -43,8 +41,6 @@ tags:
    2. OmegaOptions***.bak
 
 3. 登录google同步书签插件
-
-
 
 ## Git
 
@@ -59,6 +55,8 @@ tags:
 2. 配置插件
    1. 看板
    2. git：配置周期
+
+## 开发软件
 
 
 
@@ -78,6 +76,7 @@ tags:
    1. 配置outlook含证书账号LDAP
    2. TopVPN
    3. mindline
+   4. AdobePDF
 
 ### JetBrain
 
