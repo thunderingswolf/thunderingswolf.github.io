@@ -56,15 +56,36 @@ tags:
    1. 看板
    2. git：配置周期
 
-## 开发软件
+# 开发软件
 
-
-
-# 工作软件
+## Typora
 
 ## Portx
 
 ## SwitchHost
+
+## Xmind
+
+## Insomnia
+
+## FileZilla
+
+## Wemeet
+
+## JetBrain
+
+1. idea
+2. pycharm
+3. webstorm
+4. datagrip
+
+# 工作专用
+
+## TopVPN
+
+1. 安装deb
+2. 补充so文件
+3. share/applications创建快捷方式
 
 ## Wework
 
@@ -73,39 +94,10 @@ tags:
 ## Virtulbox
 
 1. win10
-   1. 配置outlook含证书账号LDAP
-   2. TopVPN
+   1. outlook：含证书账号LDAP
+   2. TopVPN：双vpn
    3. mindline
    4. AdobePDF
 
-### JetBrain
-
-1. idea
-2. pycharm
-3. webstorm
-4. datagrip
-
-## TopVPN
-
-1. 安装deb
-2. 补充so文件
-3. share/applications创建快捷方式
-
-## Typora
-
-## Xmind
-
-## Insomnia
-
-### FileZilla
-
-## Wemeet
-
-
-
-
-
-
-
-
+## Dev证书
 
