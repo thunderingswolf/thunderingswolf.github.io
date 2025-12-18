@@ -60,6 +60,29 @@ tags:
 
 
 
+# 工作软件
+
+## Portx
+
+## SwitchHost
+
+## Wework
+
+1. 星火spark
+
+## Virtulbox
+
+### JetBrain
+
+1. idea
+2. pycharm
+3. webstorm
+4. datagrip
+
+
+
+
+
 
 
 
