@@ -124,4 +124,3 @@ Next主题：<http://theme-next.iissnan.com/>
 1. 执行hexo g -d发布网站到master分支；
 2. 域名解析指向已完成；
 
-
