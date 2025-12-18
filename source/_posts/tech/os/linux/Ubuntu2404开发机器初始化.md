@@ -42,7 +42,7 @@ tags:
    1. 先通过系统代理配置
    2. OmegaOptions***.bak
 
-3. 登录google同步书签
+3. 登录google同步书签插件
 
 
 
@@ -100,7 +100,7 @@ tags:
 
 ### FileZilla
 
-
+## Wemeet
 
 
 
