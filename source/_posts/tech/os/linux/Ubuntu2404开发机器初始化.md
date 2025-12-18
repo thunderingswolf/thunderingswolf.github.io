@@ -15,14 +15,16 @@ tags:
 
 1. U盘模式
 
-# 网络配置
+# 基础软件
+
+## 网络配置
 
 1. 有线网卡配置静态IP（192.168.0.110）
 2. 无线网卡配置静态IP（192.168.0.110）
 
 
 
-# Docker环境
+## Docker环境
 
 1. Docker在线安装&离线，新版含docker compose
 2. V2ray离线安装
@@ -31,7 +33,7 @@ tags:
 
 
 
-# Chrome浏览器
+## Chrome浏览器
 
 1. 安装最新版本deb
 2. 安装ZeroOmega，导入配置文件
@@ -39,6 +41,17 @@ tags:
    2. OmegaOptions***.bak
 
 3. 登录google同步书签
+
+
+
+## Git
+
+1. 安装git工具
+2. 配置账户
+   1. github
+   2. gitlab（需先配置证书）
+
+## Obsidian工具
 
 
 
